@@ -1,0 +1,147 @@
+<section class="view" id="v-aula-3" data-aula="3" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 3 de 18</p>
+  <h1>O ciclo do agente: <em>veja o que ele fez</em></h1>
+  <figure class="cena"><img src="assets/img/aula-3.webp" width="1280" height="720" alt="Jorge, dono de loja de materiais de construção, de avental no balcão, acompanha atento no notebook os passos que aparecem um depois do outro na tela, com prateleiras de ferramentas ao fundo."></figure>
+  <p class="promise">Você consegue abrir o registro de um pedido e dizer quais arquivos ele leu e em que ordem.</p>
+  <p class="why">Na aula 2 o Codex passou a seguir as suas regras. Mas a resposta chega pronta e você não vê o caminho. Ver o caminho mostra se ele leu mesmo os seus arquivos ou se chutou.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O Codex dá ferramentas ao modelo de IA: ler arquivo, escrever, rodar comando.</li>
+      <li>Ele trabalha em ciclo: <b>pensa, age, olha o resultado</b> e repete. Só no fim responde.</li>
+      <li>Perto da resposta há um registro com cada passo, na ordem.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O modelo pensa; o Codex dá as mãos</h2>
+  <p>O modelo de IA é a parte que pensa e escreve. Sozinho, não abre arquivo nem confere nada. O Codex é um <span class="gterm" data-def="o programa que dá ao modelo de IA ferramentas (ler arquivo, rodar comando, abrir site) e o ciclo de trabalho. O Codex é um harness.">harness</span>: liga o modelo às ferramentas e o faz trabalhar em etapas.</p>
+  <p data-ex="lojista">O Jorge usava um chat no navegador para conferir o estoque. Colava a planilha toda vez, e a resposta vinha sem conferência. No Codex, o mesmo pedido abre o arquivo da pasta e confere antes de responder.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Modelo sozinho, no chat</span><p>Só vê o que você cola na conversa.</p><p>Responde de uma vez, sem conferir.</p></div>
+      <div class="depois"><span class="rot">Modelo dentro do Codex</span><p>Abre os arquivos da pasta sozinho.</p><p>Confere o resultado antes de responder.</p></div>
+    </div>
+    <figcaption>O modelo pode ser o mesmo nos dois cartões. Muda o que ele consegue fazer.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Pensar, agir, olhar e só então responder</h2>
+  <p>Quando você manda um pedido, o Codex não sai escrevendo. Pensa no que precisa, usa uma ferramenta e olha o resultado. Pensa de novo. Repete até ter tudo, e só então responde.</p>
+  <p data-ex="lojista">O Jorge pediu os itens com menos de 10 unidades. O Codex pensou "preciso do estoque", leu estoque.csv, contou as linhas e só então respondeu.</p>
+  <figure class="diag"><svg viewBox="0 0 640 220" role="img" aria-label="Ciclo do agente: pensar, agir com uma ferramenta, olhar o resultado, e voltar a pensar; quando tem tudo, sai para responder.">
+    <rect x="20" y="30" width="150" height="56" rx="12" fill="none" stroke="var(--line2)" stroke-width="2"/>
+    <text x="95" y="64" text-anchor="middle" fill="currentColor">1. pensar</text>
+    <rect x="245" y="30" width="150" height="56" rx="12" fill="none" stroke="var(--line2)" stroke-width="2"/>
+    <text x="320" y="64" text-anchor="middle" fill="currentColor">2. agir</text>
+    <rect x="132" y="140" width="150" height="56" rx="12" fill="none" stroke="var(--line2)" stroke-width="2"/>
+    <text x="207" y="174" text-anchor="middle" fill="currentColor">3. olhar</text>
+    <rect x="470" y="30" width="150" height="56" rx="12" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <text x="545" y="64" text-anchor="middle" fill="#fff">responder</text>
+    <path d="M170 58 L240 58" stroke="var(--line2)" stroke-width="2" fill="none"/>
+    <path d="M300 86 L240 138" stroke="var(--line2)" stroke-width="2" fill="none"/>
+    <path d="M150 140 L100 90" stroke="var(--line2)" stroke-width="2" fill="none"/>
+    <path d="M95 30 C95 0 545 0 545 28" stroke="var(--accent)" stroke-width="2" fill="none" stroke-dasharray="6 5"/>
+  </svg>
+  <figcaption>As três caixas giram enquanto falta informação. Quando ele conclui que tem tudo, sai pela linha tracejada para responder.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Abra o registro do que ele fez</h2>
+  <p>Perto da resposta aparece uma linha curta, algo como "trabalhou por 25 s". Clique nela e o registro abre: o raciocínio resumido e cada ação, na ordem. O texto e o lugar dessa linha podem mudar entre versões. Não achou? Peça: "liste os arquivos que você leu, na ordem".</p>
+  <p data-ex="consultora">A Paula pediu um e-mail de retorno para a cliente Acme e abriu o registro para ver de onde veio a informação.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Escreva um e-mail de retorno para a Acme sobre a proposta.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>▾ trabalhou por 25 s
+• leu paula-escritorio/AGENTS.md
+• pensou: preciso do histórico da cliente
+• leu clientes/acme.md
+• leu modelos-de-email/retorno.md
+• pensou: já tenho tudo, vou escrever</p>
+      </div>
+      <p class="tela-nota bom">Leia de cima para baixo: é a ordem real. Primeiro as regras, depois o cliente, por fim o modelo de e-mail.</p>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">No registro acima, que arquivo ele leu logo depois de pensar "preciso do histórico da cliente"?</p>
+    <button class="opt" data-k="a" data-fb="O AGENTS.md veio antes desse pensamento, no começo.">paula-escritorio/AGENTS.md</button>
+    <button class="opt" data-k="b" data-fb="Isso. O pensamento levou direto ao arquivo da cliente.">clientes/acme.md</button>
+    <button class="opt" data-k="c" data-fb="O modelo de e-mail veio só depois do arquivo da cliente.">modelos-de-email/retorno.md</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>O registro mostra o que falta na pasta</h2>
+  <p>Ler o registro ensina. Resposta sobre algo da sua pasta sem nenhuma leitura de arquivo é sinal de chute. Peça: "leia o arquivo antes de responder". Se ele procurou muito até achar, falta uma linha no mapa do <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span>.</p>
+  <p data-ex="lojista">O Jorge viu o Codex abrir cinco arquivos até achar os preços. Acrescentou ao mapa "preços → catalogo.md". No pedido seguinte, ele foi direto.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sem a linha no mapa</span><p>Registro: leu promocoes-semana.md, leu estoque.csv, leu três arquivos antigos, leu catalogo.md.</p></div>
+      <div class="depois"><span class="rot">Com a linha no mapa</span><p>Registro: leu AGENTS.md, leu catalogo.md. Respondeu.</p></div>
+      <p class="saldo"><b>Saldo:</b> de seis leituras para duas no mesmo pedido.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O registro às vezes mostra comandos com nomes estranhos. Você não precisa entender cada um: procure só os nomes dos seus arquivos e a ordem em que aparecem.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Faça um pedido e leia o caminho dele</h3>
+  <p class="pgoal">Pronto quando você anotar, na ordem, os arquivos que ele leu. Cerca de 10 minutos.</p>
+  <p class="psafe">O pedido só lê arquivos da pasta de teste. Nada é alterado nem enviado a ninguém.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Usando os arquivos desta pasta, escreva em 3 linhas o que eu devo resolver primeiro nesta semana.
+Não altere nenhum arquivo.</pre></div>
+  <details class="mais"><summary>Veja o que o Jorge anotou</summary>
+    <p>"1. AGENTS.md. 2. estoque.csv. 3. promocoes-semana.md." Ele percebeu que o catálogo nem foi aberto, porque o pedido não precisava dele.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta de teste, cole o pedido e espere a resposta.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Clique na linha curta perto da resposta, algo como "trabalhou por", para abrir o registro.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Anote os arquivos lidos, na ordem. Algum ficou de fora? Pense se falta uma linha no mapa.</span></label></li>
+  </ol>
+  <p class="pdone">Você leu o caminho do Codex por dentro e sabe dizer de onde veio cada parte da resposta.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>O ciclo do agente</h3>
+    <ol>
+      <li><span><b>Harness</b>o Codex dá ferramentas ao modelo de IA.</span></li>
+      <li><span><b>Ciclo</b>pensa, age, olha e repete. Responde só no fim.</span></li>
+      <li><span><b>Registro</b>linha curta perto da resposta: arquivos lidos, na ordem.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe conferir se a resposta veio dos seus arquivos.</p>
+    <p class="na-action">No próximo pedido importante desta semana, abra o registro antes de usar a resposta.</p>
+    <p class="na-hook">Na próxima aula: ele para quando acha que acabou. E se você quiser que ele insista até cumprir um objetivo?</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Mesmo modelo, resultado diferente</h3><p>O mesmo modelo rende mais dentro do Codex do que num chat, porque ali ele pode conferir o próprio trabalho: abre o arquivo, vê se ficou certo e corrige. O harness é metade do resultado.</p>
+    <h3>Regras não são memórias</h3><p>O AGENTS.md diz como trabalhar: tom, limites, mapa. Memória é um fato lembrado, como "a Paula prefere propostas de uma página". As duas aparecem no registro quando são lidas, mas servem para coisas diferentes.</p>
+    <h4>Um pedido pode dar muitas voltas</h4><p>Um pedido simples leva uma volta no ciclo. Um pedido grande pode levar dezenas. Quanto mais clara a pasta e o mapa, menos voltas ele precisa.</p></section>
+</details>
+<nav class="lnav"><a href="#aula-2">← aula anterior</a><a class="next" href="#aula-4">próxima aula →</a></nav>
+<p class="aula-pe">Aula 3 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-3">
+[
+  {"front":"A resposta sobre um cliente da sua pasta parece inventada. Onde você olha para tirar a dúvida?","back":"No registro do pedido. Se não aparece nenhuma leitura do arquivo do cliente, peça: \"leia o arquivo antes de responder\"."},
+  {"front":"No registro, o Codex abriu cinco arquivos até achar os preços. O que isso diz sobre a sua pasta?","back":"Falta uma linha no mapa do AGENTS.md apontando onde ficam os preços."},
+  {"front":"Qual a diferença entre o modelo de IA e o Codex?","back":"O modelo pensa e escreve. O Codex dá a ele ferramentas, como ler e escrever arquivos, e o faz trabalhar em ciclo."}
+]
+</script>
+</section>

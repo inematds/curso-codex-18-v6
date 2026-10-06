@@ -1,0 +1,177 @@
+<section class="view" id="v-aula-16" data-aula="16" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 16 de 18</p>
+  <h1>Subagentes: delegue <em>em paralelo</em></h1>
+  <figure class="cena"><img src="assets/img/aula-16.webp" width="1280" height="720" alt="Paula, consultora de RH, numa mesa de reunião entrega uma pasta a cada um de três assistentes, que abrem a sua parte do trabalho ao mesmo tempo."></figure>
+  <p class="promise">Você consegue pedir uma pesquisa dividida em três ajudantes, com um modelo mais barato neles, e receber um resultado só, já juntado.</p>
+  <p class="why">Uma pesquisa com três frentes, feita por uma conversa só, anda em fila. Termina a primeira, começa a segunda, depois a terceira. Enquanto isso, a sua manhã vai embora. Nesta aula o Codex divide o trabalho e você recebe tudo junto.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O Codex da sua conversa pode disparar ajudantes que trabalham ao mesmo tempo.</li>
+      <li>No pedido, diga as partes, escreva "não faça você" e escolha o Luna para os ajudantes.</li>
+      <li>Divida só quando as partes são independentes, grandes e mexem em arquivos diferentes.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Um principal planeja, os ajudantes trabalham juntos</h2>
+  <p>O Codex com quem você conversa é o <b>agente principal</b>. Ele pode disparar <span class="gterm" data-def="ajudante que o Codex principal dispara para fazer uma parte do trabalho em paralelo.">subagentes</span>. Cada ajudante recebe uma parte, roda o próprio ciclo de pensar, agir e responder, e devolve um relatório.</p>
+  <p>Cada ajudante começa só com a instrução que recebeu, sem a conversa inteira. Por isso o foco dele fica estreito. No fim, o principal junta os relatórios numa resposta.</p>
+  <p data-ex="consultora">A Paula escreve um post por semana sobre RH e inteligência artificial. A pesquisa tinha três frentes e tomava a manhã de segunda. Agora as três frentes rodam ao mesmo tempo.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Em fila</span><p>Uma conversa pesquisa ferramentas novas. Depois, o que as empresas fazem. Depois, as dúvidas do RH.</p><p>A terceira frente só começa quando a segunda acaba.</p></div>
+      <div class="depois"><span class="rot">Em paralelo</span><p>Três ajudantes, um por frente, começam juntos.</p><p>O principal espera os três relatórios e monta um resumo único.</p></div>
+    </div>
+    <figcaption>O cartão <b>Em paralelo</b> mostra o que muda: as três partes andam ao mesmo tempo, e o principal só junta.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Peça as partes e o modelo dos ajudantes</h2>
+  <p>Não precisa programar. O pedido diz três coisas: quais são as partes, que o principal <b>não deve fazer sozinho</b> e onde guardar o resultado.</p>
+  <p>A assinatura tem um limite semanal de uso, a <b>cota</b>. Três ajudantes ao mesmo tempo gastam cota ao mesmo tempo. Vale a regra da aula 8: modelo pela tarefa, e o modelo mais forte gasta mais. O principal planeja e junta, então fica com o GPT-6-Astra. Os ajudantes buscam e resumem, então podem usar o GPT-6-Luna, rápido e econômico.</p>
+  <p data-ex="consultora">A Paula abriu o projeto <b>paula-escritorio</b> e mandou o pedido abaixo. Veja o começo da resposta: primeiro ele lê o <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span> dela, depois divide.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Pesquise o que mudou esta semana sobre RH e inteligência artificial, em três frentes: 1) ferramentas novas; 2) o que empresas fazem na prática; 3) dúvidas comuns de profissionais de RH.
+Não faça você mesmo: dispare um subagente por frente e use GPT-6-Luna nos ajudantes. Cada um devolve até 5 itens, com o link de onde tirou.
+No fim, junte tudo em linkedin/pesquisa-semana.md e sugira 3 ideias de post.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Li paula-escritorio/AGENTS.md. Vou disparar três subagentes com GPT-6-Luna:
+• Ajudante 1: ferramentas novas
+• Ajudante 2: empresas na prática
+• Ajudante 3: dúvidas de RH
+Quando os três terminarem, junto em linkedin/pesquisa-semana.md…</p>
+      </div>
+      <p class="tela-nota bom">O principal repetiu as três partes e o modelo antes de começar. Isso confirma que entendeu.</p>
+    </div>
+    <figcaption>Repare na frase <b>"não faça você mesmo"</b>: sem ela, o principal pode decidir pesquisar tudo sozinho.</figcaption>
+  </figure>
+  <details class="mais"><summary>Prefere abrir a sessão já com o modelo forte?</summary>
+    <p>No aplicativo, escolha o modelo no seletor embaixo da caixa de mensagem (o nome do botão pode mudar entre versões). Quem usa o <span class="gterm" data-def="janela de texto onde você digita comandos para o computador. No Codex é opcional: o aplicativo faz o mesmo com cliques.">terminal</span> pode abrir assim:</p>
+    <div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Linha de comando</span></div>
+<pre><code><span class="pr">$</span> codex -m gpt-6-astra</code></pre>
+<p class="tela-nota">O principal começa no Astra. O modelo dos ajudantes você escolhe no próprio pedido.</p></div>
+  </details>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Acompanhe cada ajudante e junte bem</h2>
+  <p>Quando os ajudantes entram em ação, a conversa mostra um marcador colorido para cada um, com o nome dele. Clicando no marcador, você vê o registro daquele ajudante: o que pensou, que ferramentas usou e o que respondeu. O formato pode mudar entre versões.</p>
+  <p>Você conversa só com o principal. Se um ajudante saiu do tema, diga ao principal para refazer só aquela parte.</p>
+  <p data-ex="lojista">O Jorge, da loja de materiais de construção, queria comparar três fornecedores de cimento. Pediu um ajudante por fornecedor, olhando preço, prazo e frete, e uma tabela final no projeto <b>loja-jorge</b>.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · loja-jorge</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Ajudante 1 · fornecedor A · concluído ✓</div>
+        <div class="item doc"><span class="pin">2</span> Ajudante 2 · fornecedor B · trabalhando…</div>
+        <div class="item doc">Ajudante 3 · fornecedor C · concluído ✓</div>
+        <div class="item doc dentro"><span class="pin">3</span> Principal: junta os três em compras/cimento-comparacao.md</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Conte os marcadores: pediu três partes, tem de haver três ajudantes.</span></li>
+      <li><span class="pin">2</span><span>Clique num marcador para abrir o registro daquele ajudante.</span></li>
+      <li><span class="pin">3</span><span>A junção vai para um arquivo da pasta, não fica só na conversa.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Às vezes aparece um ajudante só, ou nenhum: o principal resolveu fazer tudo sozinho. Responda na mesma conversa: "dispare um subagente por fornecedor, como pedi".</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Nem toda tarefa merece ser dividida</h2>
+  <p>Dividir tem custo. Cada ajudante gasta cota para entender a parte dele, e o principal gasta mais para juntar. Em tarefa pequena, sai mais caro e mais lento.</p>
+  <p>Três perguntas decidem. As partes são independentes? Cada uma é grande o bastante? Elas mexem em arquivos diferentes? Com três "sim", divida. Com um "não", faça numa conversa só.</p>
+  <p data-ex="lojista">O Jorge pensou em pôr três ajudantes para atualizar o estoque.csv ao mesmo tempo. Seria um erro: um apagaria a mudança do outro.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="depois"><span class="rot">Vale dividir</span><p>Pesquisa em três frentes.</p><p>Comparar três fornecedores, cada um à parte.</p><p>A mesma proposta lida por três pontos de vista.</p></div>
+      <div class="antes"><span class="rot">Não vale</span><p>Corrigir um e-mail de cinco linhas.</p><p>Rascunho, depois revisão, depois envio: um passo depende do outro.</p><p>Três ajudantes no mesmo estoque.csv.</p></div>
+    </div>
+    <figcaption>No cartão <b>Não vale</b>, cada linha mostra um motivo: tarefa pequena, tarefa em sequência e arquivo compartilhado.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">A Paula precisa traduzir um parágrafo e depois revisar a tradução. Ela deve disparar dois subagentes?</p>
+    <button class="opt" data-k="a" data-fb="Dois ajudantes não aceleram nada aqui: o segundo precisa esperar o primeiro terminar.">Sim, um para traduzir e outro para revisar</button>
+    <button class="opt" data-k="b" data-fb="O modelo mais barato não resolve o problema principal, que é a ordem dos passos.">Sim, desde que os dois usem o Luna</button>
+    <button class="opt" data-k="c" data-fb="Revisar depende da tradução pronta. É sequência, e a tarefa é pequena: uma conversa só resolve.">Não, porque um passo depende do outro</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Peça uma pesquisa em três frentes</h3>
+  <p class="pgoal">Pronto quando aparecerem três ajudantes e um arquivo único com uma seção por frente. No computador, cerca de 10 minutos.</p>
+  <p class="psafe">Os ajudantes só pesquisam e escrevem um arquivo novo na sua pasta. Nada é enviado a ninguém. Se a resposta vier estranha, apague o arquivo e mande de novo mudando uma linha.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Pesquise &lt;o assunto que você acompanha&gt; em três frentes:
+1) &lt;primeira frente&gt;
+2) &lt;segunda frente&gt;
+3) &lt;terceira frente&gt;
+
+Não faça você mesmo: dispare um subagente por frente e use GPT-6-Luna nos ajudantes.
+Cada ajudante devolve até 5 itens, com o link de onde tirou.
+
+No fim, junte tudo em &lt;pasta/arquivo.md&gt;, com uma seção por frente.
+Marque onde os ajudantes discordam e diga o que você recomenda, e por quê.</pre></div>
+  <details class="mais"><summary>Veja o molde preenchido pelo Jorge</summary>
+    <p><b>Assunto:</b> tintas para fachada vendidas na região. <b>Frentes:</b> 1) marcas mais procuradas; 2) faixa de rendimento por lata que cada marca informa; 3) reclamações comuns de clientes. <b>Arquivo:</b> catalogo/pesquisa-tintas.md.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra um projeto seu no aplicativo do Codex (qualquer pasta já aberta nele serve), copie o molde e troque o que está entre &lt; &gt;.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Mande. Se ele pedir licença para usar a internet, aprove: a pesquisa precisa dela. Conte os marcadores: devem ser três ajudantes. Clique em um e leia o registro dele.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Abra o arquivo final e confira: uma seção por frente, links e a recomendação com o porquê.</span></label></li>
+  </ol>
+  <p class="pdone">Você dividiu um trabalho em três partes, pôs o modelo econômico nos ajudantes e recebeu um resultado só.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Subagentes</h3>
+    <ol>
+      <li><span><b>Peça assim</b>as partes, "não faça você" e o arquivo do resultado.</span></li>
+      <li><span><b>Modelo</b>Astra no principal, Luna nos ajudantes de busca e resumo.</span></li>
+      <li><span><b>Divida só se</b>as partes forem independentes, grandes e em arquivos diferentes.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe pôr três ajudantes para trabalhar ao mesmo tempo e receber tudo juntado.</p>
+    <p class="na-action">Hoje, escolha uma pesquisa que você faz toda semana e escreva as três frentes dela num papel ou nas Notas do celular. Na próxima aula ela pode virar uma tarefa que roda sozinha.</p>
+    <p class="na-hook">Na próxima aula: e o pedido que se repete toda semana, igual? Você vai deixar o Codex fazê-lo no horário marcado, sem precisar lembrar.</p>
+  </div>
+</div>
+
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec">
+    <h3>Barato não é para tudo</h3>
+    <p>O Luna vai bem em buscar, listar e resumir. Se a parte do ajudante exige julgamento fino, como comparar contratos ou avaliar um currículo delicado, use o modelo intermediário, o GPT-6.1-Sol, ou o forte.</p>
+    <h3>Junção bem pedida</h3>
+    <p>Diga o formato final (tabela, lista ou texto), peça para marcar onde os ajudantes discordam, exija a fonte de cada informação e salve num arquivo da pasta. Junção fraca é três relatórios colados um embaixo do outro, com a recomendação sem porquê.</p>
+    <h4>Perspectivas diferentes de propósito</h4>
+    <p>Ajudante também serve para opinião. A Paula pede a mesma proposta lida por três ajudantes: um como cliente desconfiado, um como diretor financeiro, um como candidato. O principal junta as críticas e ela ajusta o texto antes de enviar.</p>
+    <h4>Semana com a cota no fim</h4>
+    <p>Dividir gasta cota em dobro: ajudantes entendendo a tarefa e principal juntando. Se a cota da semana está acabando, faça numa conversa só.</p>
+  </section>
+</details>
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-17">próxima aula →</a></nav>
+<p class="aula-pe">Aula 16 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-16">
+[
+  {"front":"Você pediu uma pesquisa em três frentes e apareceu um único marcador de ajudante. O que aconteceu e o que você responde?","back":"O principal decidiu fazer sozinho. Responda na mesma conversa pedindo um ajudante por frente, como no pedido original."},
+  {"front":"Por que o principal fica com o Astra e os ajudantes com o Luna numa pesquisa dividida?","back":"O principal planeja e junta, o que exige mais força. Os ajudantes buscam e resumem, e três deles ao mesmo tempo gastariam muita cota no modelo forte."},
+  {"front":"Um ajudante trouxe itens fora do tema. Com quem você fala para corrigir?","back":"Com o principal. Diga qual ajudante saiu do tema e peça para refazer só aquela parte."},
+  {"front":"Atualizar o mesmo arquivo de estoque com três ajudantes: vale dividir?","back":"Não. Os três mexeriam no mesmo arquivo e um apagaria a mudança do outro."}
+]
+</script>
+</section>

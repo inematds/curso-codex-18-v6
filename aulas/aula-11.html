@@ -1,0 +1,163 @@
+<section class="view" id="v-aula-11" data-aula="11" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 11 de 18</p>
+  <h1>Skills: receitas <em>reutilizáveis</em></h1>
+  <figure class="cena"><img src="assets/img/aula-11.webp" width="1280" height="720" alt="Paula, consultora de RH, faz panquecas na cozinha de casa lendo uma receita escrita à mão, com o notebook aberto na mesa: a receita anotada garante que a próxima saia igual."></figure>
+  <p class="promise">Você consegue transformar uma tarefa que deu certo numa skill e chamá-la de novo numa conversa nova.</p>
+  <p class="why">Toda semana você reescreve as mesmas instruções: o tom, o tamanho, o que não pode faltar. E a correção que você fez ontem some na conversa de hoje. Uma skill guarda esse jeito de fazer por escrito.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Uma skill é uma receita escrita para o Codex repetir uma tarefa do mesmo jeito.</li>
+      <li>O jeito mais fácil de criar: fazer a tarefa uma vez, ajustar e pedir "transforme isso numa skill".</li>
+      <li>Para usar, peça em português ou chame pelo nome com uma barra na frente.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Uma skill é uma receita que melhora</h2>
+  <p>Pense numa panqueca que queimou. Você anota na receita: "trinta segundos a menos de cada lado". A próxima sai boa, e você nem pensa mais nisso. Uma <span class="gterm" data-def="receita reutilizável: um arquivo SKILL.md com o nome, quando usar e os passos de uma tarefa.">skill</span> funciona igual: cada correção entra na receita.</p>
+  <p data-ex="consultora">Paula escreve a descrição dos posts do LinkedIn toda semana. Antes, repetia as regras a cada pedido. Hoje, ela pede a descrição e o Codex já segue o jeito dela.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Pedido solto toda vez</span><p>Paula cola as mesmas quatro regras em cada conversa.</p><p>Cada descrição sai de um jeito. A correção de ontem se perde.</p></div>
+      <div class="depois"><span class="rot">Com skill</span><p>As regras ficam escritas uma vez, num arquivo.</p><p>A descrição sai sempre no mesmo padrão. Correção nova vira regra fixa.</p></div>
+      <p class="saldo"><b>Saldo:</b> quatro regras digitadas uma vez, em vez de toda semana.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Por dentro: etiqueta no topo, receita embaixo</h2>
+  <p>A skill mora numa pasta própria, com um arquivo chamado <span class="gterm" data-def="o arquivo da skill: no topo, nome e quando usar; embaixo, as instruções.">SKILL.md</span>. No topo, entre duas linhas de três traços, ficam o nome e a descrição de quando usar. Embaixo, as instruções em texto comum.</p>
+  <p>O Codex não lê todas as receitas inteiras. Ele olha só as descrições e escolhe a que serve. Por isso a descrição precisa dizer, com clareza, em que situação a skill entra.</p>
+  <p data-ex="consultora">Esta é a skill de descrição de posts da Paula, inteira.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>.agents/skills/descricao-post/SKILL.md</span></div>
+      <div class="janela-body">
+<pre style="padding-top:16px"><code>---
+name: descricao-post
+description: Use quando eu pedir a descrição de um post para o LinkedIn.
+---
+# Regras
+- De 2 a 4 frases. Sem tópicos.
+- Tom próximo e profissional.
+- Termine com uma pergunta para o leitor.
+# Passos
+1. Leia o rascunho que eu passar.
+2. Ache o tema central em uma frase.
+3. Escreva seguindo as regras.</code></pre>
+      </div>
+    </div>
+    <figcaption>As quatro primeiras linhas são a etiqueta: é tudo o que o Codex olha para decidir se usa a receita.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="pratico">
+  <h2><span class="n">3</span>Crie a partir do que já deu certo</h2>
+  <p>Não escreva a skill do zero. Faça a tarefa uma vez com o Codex, corrija até ficar boa e, no fim, peça a receita. Ele já viu cada correção e escreve a skill a partir daí.</p>
+  <p data-ex="lojista">Jorge montou a promoção da semana com os itens parados no estoque. Pediu duas correções: desconto de no máximo 20% e o preço antigo riscado. Depois, pediu a skill.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>A promoção ficou do jeito que eu queria. Transforme isso numa skill deste projeto. Inclua todas as correções que eu fiz. Mostre o arquivo antes de salvar.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Vou criar .agents/skills/promocao-semana/SKILL.md:
+name: promocao-semana
+description: Use quando eu pedir a promoção da semana.
+Regras: desconto de no máximo 20%; mostrar o preço antigo riscado.
+Passos: 1. Ler estoque.csv. 2. …
+Posso salvar?</p>
+      </div>
+      <p class="tela-nota bom">As duas correções do Jorge viraram regras. Confira cada uma antes de aprovar.</p>
+    </div>
+    <figcaption>O pedido do aluno é o modelo da prática. A resposta mostra a etiqueta e as regras.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="pratico">
+  <h2><span class="n">4</span>Chame por texto ou pela barra, e melhore</h2>
+  <p>Há dois jeitos de usar a skill. Pedir em português, e o Codex escolhe a receita pela descrição. Ou digitar na caixa de mensagem o nome dela com uma barra na frente: é o jeito garantido.</p>
+  <p data-ex="lojista">Na segunda seguinte, Jorge abriu uma conversa nova e testou os dois jeitos.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-caso" data-rotulo="Por texto">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Monte a promoção da semana.</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Usando a skill promocao-semana. Li loja-jorge/estoque.csv…</p>
+        </div>
+        <p class="tela-nota bom">Ele achou a receita pela descrição.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Pela barra">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>/promocao-semana</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Usando a skill promocao-semana. Li loja-jorge/estoque.csv…</p>
+        </div>
+        <p class="tela-nota bom">Pelo nome, não há dúvida sobre qual receita usar.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b>: o resultado é o mesmo, o caminho muda.</figcaption>
+  </figure>
+  <p>Saiu algo de que você não gostou? Diga "gostei disso, não daquilo; atualize a skill". A próxima vez já sai corrigida.</p>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Pediu por texto e ele não usou a skill? A descrição está vaga. Chame pela barra e peça "deixe a descrição desta skill mais clara sobre quando usar".</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Guarde uma tarefa como skill</h3>
+  <p class="pgoal">No computador, com o aplicativo do Codex aberto na pasta do seu projeto. Pronto quando a skill funcionar numa conversa nova. Cerca de 10 minutos.</p>
+  <p class="psafe">A skill é só um arquivo de texto dentro da sua pasta; nada vai para fora. Se ficar estranha, peça para ele apagar a pasta da skill e comece de novo.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">A tarefa que fizemos agora ficou do jeito que eu queria. Transforme-a numa skill deste projeto, em .agents/skills/&lt;nome-curto&gt;/SKILL.md.
+No topo, entre linhas de ---, coloque name e uma description dizendo em que situação usar.
+Embaixo, escreva as regras (inclua todas as correções que eu fiz) e os passos em ordem.
+Mostre o arquivo antes de salvar.</pre>
+  <p>Você não cria a pasta: o Codex cria sozinho. Você só troca o nome curto entre &lt; &gt;, por exemplo resposta-candidato.</p></div>
+  <details class="mais"><summary>Veja o nome escolhido pela Paula</summary>
+    <p>Paula usou <b>resposta-candidato</b>, para a tarefa de responder candidatos de uma vaga em três a cinco frases cordiais.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Faça uma tarefa pequena que se repete no seu trabalho e corrija até ficar boa.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Copie o pedido, troque o nome entre &lt; &gt; e confira se as suas correções estão no arquivo antes de aprovar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Abra uma conversa nova e chame a skill pela barra, com o nome que você deu.</span></label></li>
+  </ol>
+  <p class="pdone">Você transformou uma tarefa sua numa receita que o Codex repete do mesmo jeito.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Skills</h3>
+    <ol>
+      <li><span><b>Receita</b>um SKILL.md com etiqueta no topo e instruções embaixo.</span></li>
+      <li><span><b>Criar</b>faça uma vez, corrija e peça "transforme isso numa skill".</span></li>
+      <li><span><b>Usar</b>peça em português ou chame com a barra; corrija e atualize.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já guarda o seu jeito de fazer uma tarefa para o Codex repetir.</p>
+    <p class="na-action">Esta semana, escolha mais uma tarefa que você repete toda segunda e transforme em skill depois de fazê-la bem uma vez.</p>
+    <p class="na-hook">Na próxima aula: onde exatamente essa receita mora, e como trazer as que você já tem em outra ferramenta.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Curta ou longa</h3><p>Uma skill pode ter cinco linhas ou duas páginas. Comece com as regras que você mais repete. Ela cresce a cada correção.</p>
+    <h3>Encadear receitas</h3><p>Uma skill pode levar à outra. Paula grava um vídeo, usa a skill de descrição, depois a de post do LinkedIn e, por fim, a de artigo. No fim, ela pergunta "que skills você usou?" e o Codex lista.</p>
+    <h4>Experimente agora</h4><p>Abra uma conversa nova no projeto e pergunte "que skills você tem disponíveis neste projeto?". A sua skill tem de aparecer, com a descrição que você escreveu.</p></section>
+</details>
+<nav class="lnav"><a href="#aula-10">← aula anterior</a><a class="next" href="#aula-12">próxima aula →</a></nav>
+<p class="aula-pe">Aula 11 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-11">
+[
+  {"front":"Você pediu a promoção da semana em português e o Codex não usou a sua skill. Qual parte do arquivo provavelmente está fraca?","back":"A descrição no topo. É por ela que o Codex decide se a receita serve; se for vaga, ele não a escolhe."},
+  {"front":"Qual o jeito mais fácil de criar a primeira skill: escrever do zero ou partir de uma tarefa pronta?","back":"Partir de uma tarefa que já deu certo na conversa. O Codex viu as correções e as põe na receita."},
+  {"front":"A descrição gerada pela skill saiu longa demais. O que você diz ao Codex?","back":"Que gostou do resto, mas quer no máximo quatro frases, e que atualize a skill com essa regra."}
+]
+</script>
+</section>

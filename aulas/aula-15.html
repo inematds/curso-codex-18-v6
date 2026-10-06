@@ -1,0 +1,166 @@
+<section class="view" id="v-aula-15" data-aula="15" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 15 de 18</p>
+  <h1>Sites: do localhost <em>para o mundo</em></h1>
+  <figure class="cena"><img src="assets/img/aula-15.webp" width="1280" height="720" alt="Jorge, dono de loja de materiais de construção, mostra no celular uma página simples da loja a um cliente sorridente no balcão: a página saiu do computador dele e agora abre em qualquer aparelho."></figure>
+  <p class="promise">Você consegue publicar uma página simples feita pelo Codex e decidir quem pode abrir o link.</p>
+  <p class="why">O Codex monta uma página bonita e ela abre no seu computador. Você manda o link no grupo de clientes e ninguém consegue abrir. Publicar resolve isso, desde que você escolha bem o que vai para a internet.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Página em localhost só abre no seu computador; publicada, abre em qualquer celular.</li>
+      <li>Peça "transforme isso num site" e confira antes o que vai subir.</li>
+      <li>Escolha público ou privado; dado pessoal de cliente nunca vai em página pública.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Localhost é só para você</h2>
+  <p>Quando o Codex faz uma página, ela costuma rodar em <span class="gterm" data-def="endereço que aponta para o próprio computador. Só abre na máquina onde a página está rodando.">localhost</span>. Na sua tela fica perfeita. No celular do cliente, o mesmo link não abre.</p>
+  <p>Publicar é copiar a página para um computador na nuvem, ligado dia e noite, e ganhar um endereço público. Para projetos simples, o próprio Codex faz isso, na área de Sites.</p>
+  <p data-ex="lojista">Jorge pediu uma página com as promoções da semana, a partir do arquivo promocoes.csv da loja-jorge. Mandou o link no grupo de clientes. Ninguém conseguiu abrir.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Página em localhost</span><p>Só abre no computador onde foi criada.</p><p>Some quando você desliga a máquina. O link no grupo não funciona.</p></div>
+      <div class="depois"><span class="rot">Site publicado</span><p>Abre em qualquer celular ou computador.</p><p>Fica no ar com o notebook desligado. O link vai pronto para os clientes.</p></div>
+    </div>
+    <figcaption>A página é a mesma nos dois cartões. Muda só onde ela mora.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="pratica">
+  <h2><span class="n">2</span>Peça a publicação com uma revisão antes</h2>
+  <p>Na mesma conversa em que a página foi feita, escreva "transforme isso num site". Os sites publicados ficam numa área própria do aplicativo. O nome do botão pode mudar entre versões; procure por "Sites".</p>
+  <p>Antes de subir, peça três conferências: nada de dado pessoal de cliente, a lista do que vai subir e o site fechado no começo.</p>
+  <p data-ex="lojista">Jorge revisou preços, telefone e endereço da loja no localhost. Só então pediu a publicação.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Transforme a página de promoções que está no localhost num site publicado.
+Antes de publicar: 1) confira se não há dado pessoal de cliente na página; 2) me mostre a lista de arquivos que vão subir; 3) deixe o site visível só para mim.
+Quando terminar, me passe o endereço.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Li loja-jorge/AGENTS.md e a página de promoções.
+1) Não encontrei nome, telefone nem endereço de cliente.
+2) Vão subir a página e as imagens dos produtos. A planilha estoque.csv fica de fora.
+3) O site vai ficar visível só para você. Posso publicar?</p>
+      </div>
+      <p class="tela-nota bom">Ele confere e espera o seu sim. O endereço só vem depois da publicação.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Público ou privado: decida pelo conteúdo</h2>
+  <p>Todo site publicado tem uma chave de visibilidade. Público: qualquer pessoa com o link abre. Privado: só você ou o seu time, entrando com a conta.</p>
+  <p>Link difícil de adivinhar não é privado. Basta alguém repassar.</p>
+  <p data-ex="consultora">O catálogo do Jorge é público: quanto mais gente vir, melhor. Paula montou um painel com o andamento dos processos seletivos dos clientes dela. Tem nome de candidato, então fica privado.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="depois"><span class="rot">Pode ser público</span><p>Catálogo e promoções, apresentação do seu serviço.</p><p>Horário, endereço e telefone de contato do negócio.</p></div>
+      <div class="antes"><span class="rot">Nunca público</span><p>Lista de clientes, CPF, telefone de pessoas, dados de candidatos.</p><p>Planilha de custos e margens. Rascunho que ninguém revisou.</p></div>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">Paula quer mostrar o painel dos processos seletivos a uma cliente. Qual escolha protege os candidatos?</p>
+    <button class="opt" data-k="a" data-fb="Endereço difícil não protege: qualquer pessoa que receber o link repassado abre.">Público, com um endereço difícil</button>
+    <button class="opt" data-k="b" data-fb="Tirar o nome do link não tira os nomes da página. Quem abrir vê tudo.">Público, sem o nome da cliente no link</button>
+    <button class="opt" data-k="c" data-fb="Isso. Com privado, só entra quem tem acesso, e o painel tem dados de candidatos.">Privado, com acesso só de quem precisa</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Acompanhe e tire do ar quando precisar</h2>
+  <p>Na área de Sites, cada site tem um painel de visitas, a chave de visibilidade e a opção de tirar do ar. Site privado só abre para você e o seu time. Para mostrar a outra pessoa, publique só o que pode ser público.</p>
+  <p data-ex="lojista">Jorge viu no painel quais dias trazem mais visitas e mudou o dia de mandar a promoção. A regra de publicar virou linha no <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span> da loja: nenhum dado de cliente em página pública.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · Sites</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> promocoes-da-semana</div>
+        <div class="item doc dentro"><span class="pin">2</span> Visitas</div>
+        <div class="item doc dentro"><span class="pin">3</span> Visibilidade: só eu · público</div>
+        <div class="item botao"><span class="pin">4</span> Tirar do ar</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Cada site publicado aparece na área de Sites.</span></li>
+      <li><span class="pin">2</span><span>O painel mostra quantas pessoas abriram e em que dias.</span></li>
+      <li><span class="pin">3</span><span>Comece em "só eu" e abra para o público depois de revisar.</span></li>
+      <li><span class="pin">4</span><span>Publicou algo errado? Tire do ar na hora e corrija com calma.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se você não acha a opção de visibilidade, não precisa caçar o botão. Peça na conversa: "deixe o site de promoções visível só para mim" ou "tire o site do ar". O Codex faz e confirma.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Publique uma página de apresentação, fechada</h3>
+  <p class="pgoal">No computador; no celular, leia agora e faça depois. com o aplicativo do Codex aberto num projeto seu. Pronto quando você tiver o endereço do site, visível só para você. Cerca de 10 minutos.</p>
+  <p class="psafe">O site nasce visível só para você, então ninguém mais vê. Use apenas dados públicos do seu negócio, nunca de clientes. Se algo sair errado, peça "tire o site do ar".</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Monte uma página simples de apresentação do meu trabalho com:
+&lt;nome do negócio, o que você faz, horário e contato profissional&gt;.
+Abra no localhost, no navegador do Codex, para eu revisar.
+Depois de eu aprovar, transforme num site publicado.
+Antes de publicar: confira que não há dado pessoal de cliente, me mostre a lista do que vai subir e deixe visível só para mim.
+No fim, me passe o endereço.</pre></div>
+  <details class="mais"><summary>Veja o molde preenchido pela Paula</summary>
+    <p>Monte uma página simples de apresentação do meu trabalho com: Paula, consultoria de RH para pequenas empresas; recrutamento e treinamento de líderes; atendimento de segunda a sexta; contato pelo meu e-mail profissional. Abra no localhost para eu revisar. Depois de eu aprovar, transforme num site publicado, com as mesmas três conferências, visível só para mim.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Copie o molde, troque o que está entre &lt; &gt; e mande. Revise a página no localhost e peça os ajustes.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Leia a lista do que vai subir e a conferência de dados. Só então responda que pode publicar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Abra o endereço no celular, fora do Wi-Fi. Como está fechado, ele deve pedir que você entre com a sua conta do Codex.</span></label></li>
+  </ol>
+  <p class="pdone">Você publicou uma página feita pelo Codex e decidiu quem pode abrir.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Publicar um site</h3>
+    <ol>
+      <li><span><b>Revisar</b>confira preços, contatos e textos ainda no localhost.</span></li>
+      <li><span><b>Publicar</b>"transforme isso num site", com a lista do que vai subir.</span></li>
+      <li><span><b>Visibilidade</b>comece só para você; dado de cliente nunca em página aberta.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe levar uma página do seu computador para a internet e controlar quem a vê.</p>
+    <p class="na-action">Hoje, escreva no AGENTS.md do seu projeto: "Nenhum dado de cliente em página pública. Antes de publicar, me mostre o que vai subir."</p>
+    <p class="na-hook">Na próxima aula: uma pesquisa grande sozinho demora. Você vai dividir o trabalho entre três ajudantes que rodam ao mesmo tempo.</p>
+  </div>
+</div>
+
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec">
+    <h3>Domínio e banco de dados</h3>
+    <p>O site nasce com um endereço provisório, longo e sem cara de loja. Se você já tem um nome registrado, dá para ligar esse domínio ao site. O Codex explica o passo a passo da ligação; registrar e renovar o nome é com você.</p>
+    <p>Com um banco de dados, o site deixa de ser só vitrine: guarda cadastro de quem quer receber promoções, acessos e preferências. Quanto mais o site guarda, mais decisões são suas, porque passam a envolver dados de outras pessoas. Diga no formulário para que o dado será usado.</p>
+  </section>
+  <section class="comp-sec">
+    <h3>Ler o painel de visitas em linguagem de gente</h3>
+    <p>Peça: "Olhe as visitas do site de promoções nas últimas 4 semanas. Em até 5 linhas, diga qual dia traz mais visitas, de onde as pessoas chegam e uma mudança para testar na próxima semana." Depois abra o painel e confira se o dia apontado é mesmo o de mais visitas.</p>
+    <h4>Antes de publicar, sempre</h4>
+    <p>Peça a lista do que vai subir, leia a página inteira no celular, comece fechado e abra depois. Nunca publique a pasta inteira do projeto nem use foto de cliente sem autorização.</p>
+  </section>
+</details>
+
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-16">próxima aula →</a></nav>
+<p class="aula-pe">Aula 15 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-15">
+[
+  {"front":"Um cliente diz que o link da promoção que você mandou não abre, mas no seu computador abre. O que aconteceu?","back":"A página ainda estava em localhost, que só abre na sua máquina. Falta publicar."},
+  {"front":"Você vai publicar uma página feita a partir de uma pasta com a planilha de clientes. O que pede ao Codex antes de subir?","back":"A lista do que vai subir e a conferência de que nenhum dado de cliente entra. Na dúvida, comece fechado."},
+  {"front":"Um site público com endereço impossível de adivinhar é seguro para mostrar nomes de candidatos?","back":"Não. Qualquer pessoa que receber o link repassado abre. Dado de pessoa pede site privado."},
+  {"front":"Você percebeu um preço errado no site já aberto ao público. Qual o primeiro movimento?","back":"Tirar do ar ou deixar só para você na hora. Depois corrigir com calma e abrir de novo."}
+]
+</script>
+</section>

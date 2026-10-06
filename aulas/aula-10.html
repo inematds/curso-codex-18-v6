@@ -1,0 +1,171 @@
+<section class="view" id="v-aula-10" data-aula="10" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 10 de 18</p>
+  <h1>Permissões: quanto ele faz <em>sozinho</em></h1>
+  <figure class="cena"><img src="assets/img/aula-10.webp" width="1280" height="720" alt="Jorge, dono de loja de materiais de construção, entrega um molho de chaves a um funcionário no balcão e mostra quais portas cada chave abre, com o notebook ao lado."></figure>
+  <p class="promise">Você consegue escolher o modo de permissão certo para cada pasta e registrar uma ação que o Codex nunca pode fazer.</p>
+  <p class="why">No chat do navegador, o pior que acontece é uma resposta errada. No Codex, um engano pode virar um arquivo apagado. As permissões decidem quando ele age sozinho e quando para e pede a sua licença.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Embaixo da caixa de mensagem há um seletor com três modos de permissão.</li>
+      <li><b>Pedir aprovação</b> para aprender, <b>Aprovar por mim</b> para o dia a dia, <b>Acesso total</b> só em pasta que você pode perder.</li>
+      <li>O que ele nunca pode fazer, você pede para ele registrar como regra.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Ele mexe de verdade, por isso pede licença</h2>
+  <p>O Codex cria, renomeia e apaga arquivos. Também roda comandos e usa a internet. Para isso não virar risco, ele trabalha dentro de uma <span class="gterm" data-def="área isolada onde os comandos do Codex rodam sem acesso ao resto do computador.">sandbox</span>. Dentro dela, ele mexe na pasta do projeto, que é a pasta aberta no Codex, com o nome na barra lateral. Para sair dela, ele para e pergunta.</p>
+  <p data-ex="lojista">Jorge pediu "limpe a pasta do site da loja". O Codex leu a pasta e, antes de apagar qualquer coisa, mostrou o que pretendia fazer e esperou a resposta dele.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Limpe a pasta do site da loja. Tire o que não está sendo usado.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Li loja-jorge/site/. Encontrei a pasta fotos-antigas/, que nenhuma página usa.
+Para limpar, eu apagaria essa pasta inteira.
+<b>Posso apagar? [Aprovar] [Recusar]</b></p>
+      </div>
+      <p class="tela-nota bom">Ele parou antes de apagar. Jorge abriu a pasta, viu duas fotos que queria guardar e salvou antes de aprovar.</p>
+    </div>
+    <figcaption>A pergunta antes de apagar é a permissão funcionando. Leia o que ele vai fazer antes de clicar.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Três modos, um seletor</h2>
+  <p>No aplicativo, o seletor de permissão fica embaixo da caixa de mensagem, junto do modelo e do esforço. O nome do botão pode mudar entre versões. Hoje são três modos, e cada um pergunta menos que o anterior.</p>
+  <p>Arriscado, para ele, é apagar arquivos ou mandar dados para fora do computador. Ele mesmo faz essa triagem.</p>
+  <p data-ex="consultora">Paula deixa o seletor em <b>Pedir aprovação</b> quando abre uma pasta de cliente pela primeira vez. Assim ela vê cada passo antes de acontecer.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · seletor de permissão</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Pedir aprovação: pergunta antes de editar fora da pasta e antes de usar a internet</div>
+        <div class="item doc"><span class="pin">2</span> Aprovar por mim: só pergunta quando a ação parece arriscada, como apagar</div>
+        <div class="item doc"><span class="pin">3</span> Acesso total: não pergunta nada</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Para aprender: você vê cada pedido de licença.</span></li>
+      <li><span class="pin">2</span><span>Para o dia a dia: as ações comuns passam por uma revisão automática.</span></li>
+      <li><span class="pin">3</span><span>Sem freio: só numa pasta de teste que você pode perder.</span></li>
+    </ol>
+  </figure>
+  <p>Quem prefere digitar comandos pode usar o <span class="gterm" data-def="janela de texto onde você digita comandos para o computador. No Codex é opcional: o aplicativo faz o mesmo com cliques.">terminal</span> no lugar do seletor. É opcional.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal (opcional)</span></div>
+<pre><code><span class="pr">$</span> codex -s workspace-write -a on-request
+<span class="pr">$</span> codex --approve-for-me
+<span class="pr">$</span> codex -s danger-full-access -a never</code></pre>
+<p class="tela-nota">Na ordem: o mais próximo de Pedir aprovação, de Aprovar por mim e de Acesso total.</p></div>
+  <figcaption>Os três comandos fazem o mesmo que os três modos do seletor.</figcaption></figure>
+</section>
+
+<section class="step" data-kind="pratico">
+  <h2><span class="n">3</span>Comece perguntando tudo, depois afrouxe</h2>
+  <p>Nas primeiras semanas, fique em Pedir aprovação. Cada pergunta mostra em que arquivo ele vai mexer e por quê. Quando você perceber que aprova sempre as mesmas coisas, passe para Aprovar por mim.</p>
+  <p data-ex="consultora">Paula pediu uma proposta para a cliente Acme salva em Documentos, fora da pasta do projeto. Veja a diferença entre os dois modos.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-caso" data-rotulo="Pedir aprovação">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Escreva a proposta da Acme a partir de clientes/acme.md e salve uma cópia em Documentos.</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Li paula-escritorio/clientes/acme.md e escrevi a proposta.
+Salvar fora da pasta do projeto, em Documentos/proposta-acme.md?
+<b>[Aprovar] [Recusar]</b></p>
+        </div>
+        <p class="tela-nota bom">Ele pergunta porque Documentos fica fora da pasta do projeto.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Aprovar por mim">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Você</span>Escreva a proposta da Acme a partir de clientes/acme.md e salve na pasta propostas/.</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Li paula-escritorio/clientes/acme.md. Salvei propostas/proposta-acme.md. Quer que eu mostre o texto?</p>
+        </div>
+        <p class="tela-nota bom">Salvar dentro do projeto é rotina: passa sem perguntar.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare quando ele para e quando segue.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não entendeu o que ele quer fazer? Clique em Recusar e escreva "explique esse passo em português simples". Recusar não estraga nada: ele espera a sua decisão.</p></div>
+</section>
+
+<section class="step" data-kind="pratico">
+  <h2><span class="n">4</span>O que ele nunca pode fazer, vira regra escrita</h2>
+  <p>A revisão automática separa o que parece arriscado em geral. Ela não sabe que a sua planilha de estoque é sagrada. Para isso, peça ao Codex que registre a proibição na configuração do projeto. Você não precisa achar o arquivo: ele mostra o texto antes de gravar e, se quiser, diz onde gravou. Depois, teste a regra.</p>
+  <p data-ex="lojista">Jorge não quer que nenhum preço mude sem ele ver antes. Ele pediu a regra e, em seguida, testou pedindo uma remarcação.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Registre duas regras na configuração deste projeto:
+1. Nunca apagar o arquivo estoque.csv.
+2. Nunca mudar um preço sem me mostrar antes.
+Mostre o que vai gravar antes de salvar.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Vou gravar estas duas regras na configuração de loja-jorge:
+1. Nunca apagar estoque.csv.
+2. Antes de mudar qualquer preço, mostrar a mudança e esperar sua resposta.
+Posso salvar?</p>
+      </div>
+      <p class="tela-nota bom">Ele repete a regra com as palavras dele. Confira se é isso mesmo antes de aprovar.</p>
+    </div>
+    <figcaption>Teste depois: peça "baixe 10% no preço do cimento". Ele deve mostrar a mudança e esperar.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Escolha o modo e registre uma proibição</h3>
+  <p class="pgoal">No computador, com o aplicativo do Codex aberto numa pasta sua. Pronto quando a regra estiver gravada e o teste parar para perguntar. Cerca de 8 minutos.</p>
+  <p class="psafe">O teste pede uma ação que a regra proíbe, então nada é feito sem você. Se ele tentar seguir mesmo assim, clique em Recusar e peça para ele mostrar onde gravou a regra.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Registre esta regra na configuração deste projeto:
+Nunca &lt;a ação proibida, ex.: apagar nada dentro de clientes/&gt;.
+Mostre o que vai gravar antes de salvar.</pre></div>
+  <details class="mais"><summary>Veja a regra preenchida pela Paula</summary>
+    <p>Nunca enviar e-mail para cliente sem me mostrar o texto antes. Nunca apagar nada dentro de clientes/.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra a pasta na barra lateral do aplicativo (como na aula 1; não fez? use qualquer pasta sua de teste). No seletor embaixo da caixa de mensagem, escolha Pedir aprovação se a pasta tem documentos importantes, ou Aprovar por mim se você já conhece o Codex.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Copie o pedido, troque o que está entre &lt; &gt; pela sua proibição e aprove só depois de ler o que ele vai gravar.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Teste: peça justamente a ação proibida e confira que ele para e pergunta. Se não parar, clique em Recusar e peça "mostre a regra que você gravou".</span></label></li>
+  </ol>
+  <p class="pdone">Você escolheu quanto o Codex faz sozinho nesta pasta e deixou por escrito o que ele nunca faz.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Permissões</h3>
+    <ol>
+      <li><span><b>Pedir aprovação</b>para aprender e para pastas importantes.</span></li>
+      <li><span><b>Aprovar por mim</b>o dia a dia: só para no que parece arriscado.</span></li>
+      <li><span><b>Regra escrita</b>a proibição que é só sua, gravada e testada.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já decide o quanto o Codex age sozinho em cada pasta.</p>
+    <p class="na-action">Hoje, anote num papel as três ações que você aprova sempre. Quando a lista ficar estável, passe essa pasta para Aprovar por mim.</p>
+    <p class="na-hook">Na próxima aula: ele já trabalha com segurança. Agora você vai fazer ele repetir, do mesmo jeito, uma tarefa que deu certo.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Quando usar Acesso total</h3><p>Acesso total tira todas as perguntas. Ele faz sentido numa pasta de teste, criada só para experimentar, que você pode apagar inteira sem perder nada. Nunca use numa pasta com clientes, contratos ou a planilha do caixa.</p>
+    <h3>Dois controles no comando</h3><p>No comando, a permissão vem em duas partes. O <b>-s</b> diz onde ele pode mexer: só ler (read-only), editar dentro da pasta (workspace-write) ou em tudo (danger-full-access). O <b>-a</b> diz quando ele pede aprovação: quando precisar (on-request) ou nunca (never).</p>
+    <h4>Bons hábitos</h4><p>Leia o pedido de licença inteiro antes de clicar. Recuse e peça explicação quando não entender. Não aprove apagar arquivos só porque ele parece saber o que faz.</p></section>
+</details>
+<nav class="lnav"><a href="#aula-9">← aula anterior</a><a class="next" href="#aula-11">próxima aula →</a></nav>
+<p class="aula-pe">Aula 10 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-10">
+[
+  {"front":"Você vai abrir pela primeira vez a pasta com os contratos de um cliente. Qual modo de permissão escolhe?","back":"Pedir aprovação. Assim você vê cada passo antes de ele mexer em algo importante."},
+  {"front":"O Codex pediu licença para um passo que você não entendeu. O que fazer?","back":"Recusar e pedir que ele explique o passo em português simples. Ele espera a sua decisão."},
+  {"front":"Por que o modo Aprovar por mim não basta para proteger a sua planilha de estoque?","back":"A revisão automática não sabe o que é importante para você. A proteção específica precisa virar uma regra registrada e testada."}
+]
+</script>
+</section>

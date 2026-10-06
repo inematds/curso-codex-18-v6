@@ -1,0 +1,173 @@
+<section class="view" id="v-aula-17" data-aula="17" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 17 de 18</p>
+  <h1>Tarefas agendadas: o Codex <em>no piloto</em></h1>
+  <figure class="cena"><img src="assets/img/aula-17.webp" width="1280" height="720" alt="Jorge, dono de loja de materiais de construção, chega cedo à loja e encontra um relatório impresso esperando no balcão ao lado do notebook, com o relógio da parede marcando o começo da manhã."></figure>
+  <p class="promise">Você consegue criar uma tarefa semanal que roda sozinha no horário marcado e só prepara um rascunho para você revisar.</p>
+  <p class="why">Tem pedido que você faz toda semana, igualzinho. Só muda o dia. Na semana corrida, ele fica para depois ou sai mal escrito. Nesta aula o pedido ganha um horário e o Codex trabalha sem você lembrar.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Uma tarefa agendada é um pedido comum mais um horário.</li>
+      <li>Ela usa o mesmo projeto, as mesmas regras e o mesmo modelo de sempre.</li>
+      <li>O que roda sozinho prepara. Enviar, pagar e apagar esperam você.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A tarefa é um pedido com horário</h2>
+  <p>Não há nada de especial dentro de uma <b>tarefa agendada</b>. É o pedido que você escreveria na caixa de mensagem, mais um dia e uma hora. Quando o relógio chega lá, o Codex cola esse pedido numa sessão e começa a trabalhar.</p>
+  <p>Essa sessão é igual a qualquer outra. Abre o mesmo projeto, lê o mesmo <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span> e usa as mesmas <span class="gterm" data-def="receita reutilizável: um arquivo SKILL.md com o nome, quando usar e os passos de uma tarefa.">skills</span>. Se o pedido é bom à mão, será bom agendado.</p>
+  <p data-ex="consultora">Toda sexta no fim da tarde, a Paula abria o Codex e digitava o mesmo pedido: o resumo da semana do projeto <b>paula-escritorio</b>. Agora o pedido está agendado.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Pedir à mão</span><p>Depende de ela lembrar na sexta.</p><p>Cada semana o pedido sai um pouco diferente.</p><p>Ela espera o resultado na frente da tela.</p></div>
+      <div class="depois"><span class="rot">Agendada</span><p>Roda toda sexta às 17h, sem lembrete.</p><p>O pedido é sempre o mesmo, já testado.</p><p>Quando ela abre o Codex, o resumo está pronto para ler.</p></div>
+    </div>
+    <figcaption>No cartão <b>Agendada</b>, a Paula passa de quem produz o resumo para quem revisa.</figcaption>
+  </figure>
+  <details class="mais"><summary>Por que testar à mão antes de agendar?</summary><p>Rode o pedido uma vez na caixa de mensagem e confira o resultado. Agendar um pedido ruim só faz o erro se repetir com hora marcada.</p></details>
+</section>
+
+<section class="step" data-kind="pratica">
+  <h2><span class="n">2</span>Quatro escolhas montam a tarefa</h2>
+  <p>No aplicativo, as tarefas ficam numa área chamada <b>Agendadas</b>. O nome do botão pode mudar entre versões; procure por "agendar" ou por um ícone de relógio.</p>
+  <p>Toda tarefa pede quatro escolhas: onde roda, em que projeto, em que conversa e com que frequência. A mais esquecida é onde roda. Uma tarefa <b>local</b> usa os arquivos do seu computador, então ele precisa estar ligado na hora marcada. Para começar, escolha local e um horário em que o computador fica ligado.</p>
+  <p data-ex="lojista">O Jorge quer, toda segunda às 7h, a lista dos itens com estoque baixo do projeto <b>loja-jorge</b>. Se ele desligar o computador da loja na sexta, a tarefa de segunda só roda quando ele ligar de novo.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · Nova tarefa agendada</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Onde roda: local (no computador da loja)</div>
+        <div class="item pasta"><span class="pin">2</span> Projeto: loja-jorge</div>
+        <div class="item doc"><span class="pin">3</span> Conversa: uma conversa só da tarefa</div>
+        <div class="item doc"><span class="pin">4</span> Frequência: semanal · segunda · 07:00</div>
+        <div class="item botao">Salvar</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Local exige o computador ligado. Na nuvem, roda mesmo com ele desligado.</span></li>
+      <li><span class="pin">2</span><span>Sem projeto, a tarefa roda sem as regras e os arquivos dele.</span></li>
+      <li><span class="pin">3</span><span>Na dúvida, "uma conversa só da tarefa": fica separada do resto, guarda o histórico e permite comparar semanas.</span></li>
+      <li><span class="pin">4</span><span>Também há a cada hora, todo dia e frequência personalizada.</span></li>
+    </ol>
+  </figure>
+  <details class="mais"><summary>As três opções de conversa</summary><p><b>Nova a cada vez:</b> cada execução abre uma conversa limpa, bom para relatórios independentes. <b>Uma conversa só da tarefa:</b> todas as execuções caem no mesmo lugar. <b>Uma conversa existente:</b> o pedido entra numa conversa que você já usa, bom para acompanhar um trabalho em andamento.</p></details>
+</section>
+
+<section class="step" data-kind="pratica">
+  <h2><span class="n">3</span>Peça ao Codex para criar a tarefa</h2>
+  <p>Preencher o formulário funciona, mas existe um caminho mais curto: pedir em português. O Codex conhece o projeto. Sabe onde está a planilha e o que as regras proíbem, então escreve o pedido da tarefa com esses detalhes.</p>
+  <p>Termine pedindo para ver o pedido antes de salvar. É ali que você percebe um horário errado ou um limite esquecido.</p>
+  <p data-ex="lojista">O Jorge abriu o projeto da loja e escreveu o pedido abaixo, com dia, hora, o limite de unidades e o que a tarefa não pode fazer.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Crie uma tarefa agendada neste projeto: toda segunda-feira às 7h, leia o estoque.csv e me entregue a lista dos itens com menos de 10 unidades, do mais crítico ao menos crítico. Use uma conversa só para essa tarefa.
+A tarefa só prepara a lista: não faça pedido a fornecedor nem mande mensagem para ninguém.
+Antes de salvar, me mostre o pedido completo que você vai agendar.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Li loja-jorge/AGENTS.md e estoque.csv. Este é o pedido que vou agendar (toda segunda, 7h, conversa própria):
+"Leia estoque.csv e liste os itens com menos de 10 unidades, do mais crítico ao menos crítico. Só prepare a lista: não faça pedido a fornecedor nem mande mensagem para ninguém."
+Posso salvar?</p>
+      </div>
+      <p class="tela-nota bom">O limite "não faça pedido a fornecedor" voltou escrito no pedido. Só então o Jorge responde "pode salvar".</p>
+    </div>
+    <figcaption>Depois de salva, a tarefa aparece em <b>Agendadas</b> e a conversa dela ganha um ícone de relógio.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se o horário ou o limite voltar diferente do que você pediu, não salve. Responda na mesma conversa só com a correção, por exemplo "é segunda às 7h, não às 17h", e peça para mostrar de novo.</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>O que roda sozinho prepara; quem decide é você</h2>
+  <p>Na frente da tela, você vê cada passo e pode interromper. Numa tarefa agendada, ninguém está olhando. Por isso a regra é simples: rascunho, lista e relatório podem rodar sozinhos. Enviar, pagar e apagar só com você presente.</p>
+  <p>Escreva no pedido o que a tarefa não pode fazer. Peça também um registro no fim, e revise uma a uma as execuções da primeira semana.</p>
+  <p data-ex="consultora">A tarefa de sexta da Paula escreve o resumo da semana e os rascunhos de e-mail de acompanhamento. Mas os e-mails ficam como rascunho: quem envia é ela, na segunda, depois de ler.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="depois"><span class="rot">Pode rodar sozinha</span><p>Resumo da semana para ler.</p><p>Lista de estoque baixo.</p><p>Rascunho de e-mail, sem enviar.</p></div>
+      <div class="neutro"><span class="rot">Espera você</span><p>Enviar e-mail a cliente.</p><p>Fazer pedido ao fornecedor.</p><p>Apagar arquivos antigos.</p></div>
+    </div>
+    <figcaption>Tudo no cartão <b>Espera você</b> mexe com gente, dinheiro ou dados. A tarefa prepara; a decisão fica com você.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">Qual destas é uma boa primeira tarefa agendada?</p>
+    <button class="opt" data-k="a" data-fb="Responder cliente sozinho, sem ninguém olhando, é decisão que deve esperar você.">Toda noite, responder os e-mails dos clientes</button>
+    <button class="opt" data-k="b" data-fb="Só produz texto para você ler. Se sair ruim, nada aconteceu com ninguém.">Toda sexta, escrever o resumo da semana</button>
+    <button class="opt" data-k="c" data-fb="Apagar não tem volta. Uma tarefa sem supervisão não deve apagar arquivos.">Todo dia, apagar os arquivos antigos da pasta</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Crie a sua tarefa semanal de rascunho</h3>
+  <p class="pgoal">Pronto quando a tarefa aparecer em Agendadas, com dia e hora certos e o limite escrito no pedido. No computador, cerca de 10 minutos.</p>
+  <p class="psafe">A tarefa só prepara texto e o limite fica escrito no pedido. Nada é enviado a ninguém. Se algo sair errado, pause ou apague a tarefa na área Agendadas.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Crie uma tarefa agendada neste projeto: toda &lt;dia da semana&gt; às &lt;hora&gt;,
+&lt;o que ela deve preparar, ex.: escreva o resumo da semana a partir dos arquivos da pasta&gt;.
+Use uma conversa só para essa tarefa.
+
+A tarefa só prepara um rascunho: &lt;o que ela não pode fazer, ex.: não envie e-mail nem mensagem para ninguém&gt;.
+No fim de cada execução, anote o que você fez.
+
+Antes de salvar, me mostre o pedido completo que você vai agendar.</pre></div>
+  <details class="mais"><summary>Veja o molde preenchido pela Paula</summary>
+    <p>Toda <b>sexta-feira às 17h</b>, escreva o resumo da semana do projeto: clientes atendidos, propostas abertas e o que ficou pendente. Use uma conversa só para essa tarefa. A tarefa só prepara um rascunho: <b>não envie e-mail nem mensagem para ninguém</b>. No fim, anote o que você fez. Antes de salvar, me mostre o pedido completo.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Rode uma vez à mão, na caixa de mensagem, o pedido que vai virar tarefa. Gostou do resultado? Abra o projeto, copie o molde e troque o que está entre &lt; &gt;. Se a tarefa for local, escolha um horário em que o computador fica ligado.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Leia o pedido que o Codex mostrar. Confira dia, hora e o limite antes de responder "pode salvar".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Abra a área Agendadas e confira se a tarefa está lá e se a conversa dela tem o ícone de relógio.</span></label></li>
+  </ol>
+  <p class="pdone">Você criou uma tarefa que trabalha toda semana sozinha, dentro de um limite que você escreveu.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Tarefas agendadas</h3>
+    <ol>
+      <li><span><b>Pedido + horário</b>teste à mão primeiro; só depois agende.</span></li>
+      <li><span><b>Quatro escolhas</b>onde roda, projeto, conversa e frequência. Local pede máquina ligada.</span></li>
+      <li><span><b>Prepara, não decide</b>escreva no pedido o que ela não pode fazer.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe deixar um pedido semanal rodando sozinho, com limite escrito.</p>
+    <p class="na-action">Na primeira execução da sua tarefa, abra a conversa dela e leia o resultado inteiro. Se algo veio errado, corrija o pedido da tarefa na mesma hora.</p>
+    <p class="na-hook">Na próxima aula: projeto, regras, receitas, ajudantes e tarefas. Falta comandar tudo isso sem teclado, só falando, e montar a sua rotina semanal.</p>
+  </div>
+</div>
+
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec">
+    <h3>Montar à mão, pelo formulário</h3>
+    <ol>
+      <li>Na área Agendadas, crie uma tarefa nova.</li>
+      <li>Dê um nome curto que diga o que é, como "Resumo da semana", e cole o pedido já testado.</li>
+      <li>Escolha o projeto. Sem ele, volta o chat que esquece.</li>
+      <li>Marque a frequência, o dia e a hora, e salve.</li>
+    </ol>
+    <h3>Boas práticas</h3>
+    <p>Use a permissão mais restrita que dê conta do trabalho (aula 10). Evite tarefa com acesso total rodando de madrugada e nunca agende algo que não foi testado à mão.</p>
+    <h4>Faxina mensal na lista</h4>
+    <p>Uma vez por mês, abra a área Agendadas e pergunte, para cada tarefa: "eu ainda leio o que ela entrega?". Se não, pause ou apague. Tarefa esquecida gasta cota e cria resultado que ninguém olha.</p>
+  </section>
+</details>
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-18">próxima aula →</a></nav>
+<p class="aula-pe">Aula 17 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-17">
+[
+  {"front":"A tarefa local do Jorge, marcada para segunda às 7h, não rodou. Qual é a primeira coisa a conferir?","back":"Se o computador da loja estava ligado na hora. Tarefa local usa os arquivos da máquina e só roda com ela ligada."},
+  {"front":"Você quer comparar o estoque desta semana com o da semana passada. Que opção de conversa escolhe para a tarefa?","back":"Uma conversa só da tarefa: todas as execuções caem no mesmo lugar e dá para comparar."},
+  {"front":"Por que terminar o pedido de criação com \"me mostre o pedido completo antes de salvar\"?","back":"É o ponto de controle: você vê se o horário e os limites saíram certos antes de a tarefa começar a rodar sozinha."}
+]
+</script>
+</section>

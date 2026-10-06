@@ -1,0 +1,147 @@
+<section class="view" id="v-aula-12" data-aula="12" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 12 de 18</p>
+  <h1>A pasta .agents e a vinda do <em>Claude Code</em></h1>
+  <figure class="cena"><img src="assets/img/aula-12.webp" width="1280" height="720" alt="Paula, consultora de RH, arruma pastas organizadas dentro de uma mala de viagem em casa, com o notebook aberto ao lado: as regras e receitas vão junto para o novo lugar."></figure>
+  <p class="promise">Você consegue dizer onde está cada skill, no projeto ou global, e pedir ao Codex que adapte um projeto feito no Claude Code.</p>
+  <p class="why">Você criou uma receita e ela funcionou. Mas em outro projeto ela não aparece, e você não sabe por quê. E se você já montou regras e receitas em outra ferramenta, não quer refazer tudo do zero.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>As skills moram na pasta .agents, que começa com ponto e fica escondida.</li>
+      <li>Dentro do projeto, a skill vale só ali. Na sua pasta pessoal, vale em todos.</li>
+      <li>Projeto do Claude Code? Peça ao Codex: "deixe este projeto pronto para o Codex".</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>As receitas moram na pasta .agents</h2>
+  <p>Cada <span class="gterm" data-def="receita reutilizável: um arquivo SKILL.md com o nome, quando usar e os passos de uma tarefa.">skill</span> tem uma pasta própria dentro de .agents/skills/. Dentro dela fica o <span class="gterm" data-def="o arquivo da skill: no topo, nome e quando usar; embaixo, as instruções.">SKILL.md</span>. Ao lado ficam o <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span> e a pasta .codex, das preferências.</p>
+  <p>Pastas que começam com ponto ficam escondidas por padrão. Não achou? Pergunte ao Codex: "liste as pastas que começam com ponto neste projeto e o que há dentro de .agents".</p>
+  <p data-ex="consultora">Paula fez essa pergunta e viu as três receitas que já tinha criado no escritório.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>paula-escritorio</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> AGENTS.md</div>
+        <div class="item pasta">.codex</div>
+        <div class="item pasta"><span class="pin">2</span> .agents</div>
+        <div class="item pasta dentro">skills</div>
+        <div class="item pasta dentro"><span class="pin">3</span> descricao-post › SKILL.md</div>
+        <div class="item pasta dentro">resposta-candidato › SKILL.md</div>
+        <div class="item pasta dentro">proposta-cliente › SKILL.md</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>As regras da casa ficam na raiz do projeto.</span></li>
+      <li><span class="pin">2</span><span>A pasta das receitas começa com ponto: escondida por padrão.</span></li>
+      <li><span class="pin">3</span><span>Uma pasta por skill, sempre com um SKILL.md dentro.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>No projeto ou global: a pergunta que decide</h2>
+  <p>Há dois endereços. Em .agents/skills/ dentro do projeto, a skill vale só ali. Em ~/.agents/skills/, na sua pasta pessoal, ela vale em todos os projetos. O sinal ~ é o atalho para a sua pasta pessoal: no Windows, C:\Usuários\seu-nome; no Mac, a pasta com o seu nome.</p>
+  <p>Pergunte: "eu usaria esta receita em outro projeto?". Se sim, ela é global.</p>
+  <p data-ex="lojista">A skill da promoção da semana lê o estoque.csv da loja: fica no projeto loja-jorge. A skill que revisa a ortografia de qualquer texto serve para tudo o que Jorge escreve: fica na pasta pessoal.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">No projeto</span><p><b>Onde:</b> loja-jorge/.agents/skills/</p><p><b>Exemplo:</b> promocao-semana, que usa a planilha da loja.</p></div>
+      <div class="neutro"><span class="rot">Global</span><p><b>Onde:</b> ~/.agents/skills/</p><p><b>Exemplo:</b> revisar-texto, que serve para qualquer texto dele.</p></div>
+    </div>
+    <figcaption>Os dois lugares estão certos. O que decide é se a receita depende dos arquivos de um projeto.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="pratico">
+  <h2><span class="n">3</span>A receita pode abrir outros arquivos</h2>
+  <p>O SKILL.md não precisa carregar tudo. Ele pode apontar para um guia de voz, um modelo ou uma tabela. O Codex abre esses arquivos quando a receita manda. Mudou o modelo? Você edita um arquivo só, e a skill passa a usar a versão nova.</p>
+  <p data-ex="consultora">A skill proposta-cliente da Paula manda ler três arquivos antes de escrever. Ela pediu uma proposta e conferiu o que ele abriu.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Faça a proposta da cliente Acme. No fim, diga quais arquivos você abriu.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Usei a skill proposta-cliente. Abri:
+.agents/skills/proposta-cliente/SKILL.md
+clientes/acme.md
+modelos/modelo-proposta.md
+linkedin/guia-de-voz.md
+A proposta está abaixo…</p>
+      </div>
+      <p class="tela-nota bom">A lista mostra que a receita puxou o modelo e o guia de voz que ela aponta.</p>
+    </div>
+    <figcaption>Perguntar "quais arquivos você abriu?" é o jeito de conferir se a receita está funcionando.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="pratico">
+  <h2><span class="n">4</span>Projeto do Claude Code: peça para ele fazer a mala</h2>
+  <p>O Claude Code é outro agente que trabalha em pastas. As ideias são as mesmas; mudam os nomes. Lá, as regras ficam no CLAUDE.md e as receitas na pasta .claude. Aqui, no AGENTS.md e em .agents. Os dois arquivos de regras podem conviver na mesma pasta. Nunca usou o Claude Code? Este passo é só para quem usa: pule para a prática.</p>
+  <p data-ex="lojista">Jorge tinha montado o projeto da loja no Claude Code. Primeiro copiou a pasta para outro lugar, como segurança. Depois pediu ao Codex a adaptação.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">No Claude Code</span><p>CLAUDE.md, com as regras</p><p>Receitas dentro de .claude</p></div>
+      <div class="bom"><span class="rot">No Codex</span><p>AGENTS.md, com as mesmas regras</p><p>Receitas em .agents/skills/</p></div>
+      <p class="saldo"><b>O pedido:</b> "Analise este projeto, que eu montei no Claude Code, e deixe-o pronto para o Codex. Mostre o que vai mudar antes de mudar."</p>
+    </div>
+    <figcaption>Cada coisa do cartão No Claude Code tem o seu par no cartão No Codex.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Medo de bagunçar o projeto? Faça uma cópia da pasta antes, com botão direito › Copiar e depois Colar em Documentos. Se algo sair errado, você volta para a cópia.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Mapeie suas skills e adapte um projeto</h3>
+  <p class="pgoal">No computador, com o aplicativo do Codex aberto num projeto seu. Pronto quando você souber dizer onde mora cada skill. Cerca de 8 minutos.</p>
+  <p class="psafe">O primeiro pedido só lê, não muda nada. No segundo, ele mostra o plano antes de mexer; se não gostar, recuse.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Liste todas as skills que você enxerga agora.
+Para cada uma, diga se está no projeto (.agents/skills/) ou na minha pasta pessoal (~/.agents/skills/) e para que serve.</pre></div>
+  <details class="mais"><summary>Tem um projeto do Claude Code? Use também este pedido</summary>
+    <p>Analise este projeto, que eu montei no Claude Code, e deixe-o pronto para o Codex. Mostre o que vai mudar antes de mudar.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Copie o pedido e cole numa conversa nova do projeto.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Na lista que voltar, marque uma skill que deveria mudar de lugar e diga por quê. Anote no papel.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Se tiver um projeto do Claude Code, faça uma cópia da pasta e use o segundo pedido. Não tem? Pule este passo.</span></label></li>
+  </ol>
+  <p class="pdone">Você sabe onde cada receita mora e como trazer as que você tinha em outra ferramenta.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>A pasta .agents</h3>
+    <ol>
+      <li><span><b>Endereço</b>.agents/skills/nome/SKILL.md, escondida por começar com ponto.</span></li>
+      <li><span><b>Projeto ou global</b>usaria em outro projeto? Então vai para ~/.agents/skills/.</span></li>
+      <li><span><b>Vindo do Claude Code</b>cópia de segurança e o pedido "deixe pronto para o Codex".</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já organiza as suas receitas e sabe trazê-las de outra ferramenta.</p>
+    <p class="na-action">Hoje, escolha uma skill que você usaria em todo projeto e peça ao Codex para movê-la para a sua pasta pessoal.</p>
+    <p class="na-hook">Na próxima aula: as receitas estão prontas. Falta ligar seus aplicativos, como e-mail e agenda.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Ver pastas escondidas</h3><p>No Mac, aperte Command + Shift + ponto numa janela do Finder. No Windows, ative "Itens ocultos" no menu Exibir do Explorador de Arquivos.</p>
+    <h3>Sinais de skill no lugar errado</h3><p>Uma skill global que cita a planilha de estoque: em outro projeto, essa planilha não existe. A mesma skill copiada em cinco projetos: ela deveria ser global. Duas skills com o mesmo nome fazendo coisas diferentes: renomeie uma delas.</p>
+    <h4>Um projeto que serve a qualquer agente</h4><p>Regras e receitas são arquivos de texto na sua pasta. Isso deixa o projeto independente da ferramenta: você pode trocar de agente sem perder o que construiu.</p></section>
+</details>
+<nav class="lnav"><a href="#aula-11">← aula anterior</a><a class="next" href="#aula-13">próxima aula →</a></nav>
+<p class="aula-pe">Aula 12 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-12">
+[
+  {"front":"Você criou uma skill no projeto da loja e ela não aparece no projeto do escritório. Por quê?","back":"Ela foi salva na pasta .agents daquele projeto, então só vale lá. Para valer em todos, precisa ficar na pasta pessoal."},
+  {"front":"Uma skill que revisa a ortografia de qualquer texto: no projeto ou global?","back":"Global, em ~/.agents/skills/. Ela não depende de nenhum arquivo de um projeto específico."},
+  {"front":"Antes de pedir ao Codex que adapte um projeto do Claude Code, o que você faz primeiro?","back":"Uma cópia da pasta em outro lugar. Se a adaptação sair errada, você volta para a cópia."}
+]
+</script>
+</section>

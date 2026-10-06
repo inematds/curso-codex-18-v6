@@ -1,0 +1,179 @@
+<section class="view" id="v-aula-7" data-aula="7" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 7 de 18</p>
+  <h1>A pasta .codex: onde moram <em>as preferências</em></h1>
+  <figure class="cena"><img src="assets/img/aula-7.webp" width="1280" height="720" alt="Paula, consultora de RH, abre uma gaveta da escrivaninha cheia de fichas etiquetadas, com o notebook ao lado: as preferências do Codex também ficam guardadas numa gaveta própria."></figure>
+  <p class="promise">Você consegue achar as duas pastas .codex do seu computador e pedir ao Codex que mude uma preferência no lugar certo.</p>
+  <p class="why">Toda conversa nova começa com o mesmo modelo e o mesmo jeito de trabalhar. Se você muda isso no lugar errado, a mudança some ou bagunça outro projeto. Esta aula mostra onde cada preferência fica.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>As preferências do Codex ficam numa pasta escondida chamada <b>.codex</b>.</li>
+      <li>Existem duas: uma <b>dentro do projeto</b>, só para ele, e uma <b>na sua pasta pessoal</b>, para todos.</li>
+      <li>Você não edita à mão: pede ao Codex e pergunta "isso vai no projeto ou no global?".</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A pasta existe, só está escondida</h2>
+  <p>Toda pasta cujo nome começa com ponto fica oculta. O ponto quer dizer "isto é ajuste do programa, não mexa sem querer". Para ver, peça ao sistema para mostrar os itens ocultos. Nada muda nos arquivos: eles só aparecem.</p>
+  <p>Vamos usar a pasta do projeto da aula 1. Não fez a aula 1? Abra qualquer pasta que você já usou no Codex.</p>
+  <p data-ex="consultora">A Paula abriu a pasta paula-escritorio e não achou nenhum .codex. Apertou o atalho de itens ocultos e ele apareceu, meio transparente, junto do <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span>.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>paula-escritorio</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> .codex</div>
+        <div class="item doc">AGENTS.md</div>
+        <div class="item pasta">clientes</div>
+        <div class="item pasta">propostas</div>
+        <div class="item botao"><span class="pin">2</span> Mostrar itens ocultos</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>A pasta com ponto. Fica escondida até você pedir para ver.</span></li>
+      <li><span class="pin">2</span><span>Windows: Explorador › Exibir › Mostrar › Itens ocultos. Mac: Cmd + Shift + ponto. Linux: Ctrl + H.</span></li>
+    </ol>
+    <figcaption>O mesmo atalho esconde de novo. Os nomes dos menus mudam um pouco entre versões, mas sempre falam em "ocultos".</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Projeto ou usuário: a sala ou o prédio</h2>
+  <p>A primeira .codex fica dentro do projeto e vale só para ele. A segunda fica na sua pasta pessoal do computador e vale para todos os projetos. É a diferença entre a regra de uma sala e a regra do prédio inteiro.</p>
+  <p>A pasta pessoal é a que tem o seu nome de usuário. No Windows fica em C:\Usuários\seu-nome; no Mac, em Usuários › seu-nome. Mostre os itens ocultos nela e a .codex global aparece.</p>
+  <p>Nos comandos, a pasta pessoal ganha o apelido ~ (o sinal de til). Por isso a global aparece escrita como ~/.codex.</p>
+  <p data-ex="lojista">O Jorge queria que a loja-jorge usasse sempre o modelo mais leve. Mas não queria mudar a pasta das propostas para a prefeitura, que pede mais cuidado. A preferência foi para a sala, não para o prédio.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">loja-jorge/.codex</span><p><b>Vale:</b> só neste projeto.</p><p><b>Vai aqui:</b> ajustes que só fazem sentido para a loja e que você quer levar junto com a pasta.</p></div>
+      <div class="neutro"><span class="rot">~/.codex</span><p><b>Vale:</b> em todos os projetos deste computador.</p><p><b>Vai aqui:</b> seu modelo e esforço padrão. O Codex também guarda aqui o histórico, as memórias e o seu acesso à conta.</p></div>
+    </div>
+    <figcaption>Os dois cartões estão certos. A pergunta é só onde a preferência deve valer.</figcaption>
+  </figure>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">A Paula quer que o Codex pense mais só quando trabalha nas propostas dela. Em que lugar isso deve ficar?</p>
+    <button class="opt" data-k="a" data-fb="A global mudaria todos os projetos dela, inclusive os que não precisam disso.">Na pasta ~/.codex do computador</button>
+    <button class="opt" data-k="b" data-fb="O AGENTS.md guarda as regras da casa em texto, não as preferências do programa.">No AGENTS.md de qualquer projeto</button>
+    <button class="opt" data-k="c" data-fb="Isso. O que vale só para um trabalho fica na .codex daquele projeto.">Na pasta .codex do projeto</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O config.toml por dentro é uma lista</h2>
+  <p>O coração dessas pastas é o <span class="gterm" data-def="arquivo de preferências do Codex, em texto, com linhas do tipo chave = valor.">config.toml</span>. O nome assusta, mas cada linha traz o nome da preferência, um sinal de igual e o valor. Texto vai entre aspas.</p>
+  <p data-ex="consultora">A Paula abriu o arquivo global no bloco de notas e encontrou duas linhas. Em cinco minutos entendeu: o modelo que ela usa por padrão e quanto ele pensa antes de responder.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>~/.codex/config.toml</span></div>
+      <div class="janela-body">
+<pre><code>model = "gpt-6-astra"
+model_reasoning_effort = "medium"</code></pre>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>A primeira linha escolhe o modelo padrão (aula 8).</span></li>
+      <li><span class="pin">2</span><span>A segunda, "esforço de raciocínio" em inglês, diz quanto ele pensa antes de responder (aula 9).</span></li>
+    </ol>
+    <figcaption>Esquecer uma aspa é o erro mais comum de quem edita à mão. Por isso o próximo passo é pedir ao Codex.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="pratica">
+  <h2><span class="n">4</span>Peça a mudança e pergunte onde ela vai</h2>
+  <p>Você não precisa saber o nome da preferência. Diga em português o que quer e faça a pergunta que evita surpresa: "isso vai no .codex do projeto ou no global?". O Codex consulta a própria documentação e mostra a linha antes de gravar.</p>
+  <p data-ex="lojista">O Jorge pediu para a loja-jorge pensar no nível médio, sem mexer nos outros projetos. Veja o que voltou.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Quero que o esforço padrão seja medium só neste projeto, sem mudar os outros. Me diga em que arquivo isso fica e me mostre a linha antes de gravar.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Isso fica no .codex do projeto: loja-jorge/.codex/config.toml. O global (~/.codex) mudaria todos os seus projetos.
+Linha que vou escrever:
+model_reasoning_effort = "medium"
+Posso gravar?</p>
+      </div>
+      <p class="tela-nota bom">Ele disse o arquivo, explicou a alternativa e esperou o "pode gravar".</p>
+    </div>
+    <figcaption>As preferências costumam valer a partir da próxima conversa. Abra uma nova para conferir.</figcaption>
+  </figure>
+  <p>Mexe com comandos? No <span class="gterm" data-def="janela de texto onde você digita comandos para o computador. No Codex é opcional: o aplicativo faz o mesmo com cliques.">terminal</span> dá para mudar o esforço só por uma sessão, sem tocar no arquivo. Ao fechar, volta ao padrão.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Opcional</span></div>
+<pre><code>codex -c model_reasoning_effort="high"</code></pre>
+<p class="tela-nota">Vale só para esta sessão. O config.toml não muda.</p></div></figure>
+  <div class="qerr"><p><span class="k">Erro comum</span>Mandar a pasta ~/.codex inteira para um amigo, "com tudo pronto". Ali dentro está o seu <span class="gterm" data-def="entrar com o seu usuário e senha num serviço.">login</span> e o histórico das conversas. Para ajudar alguém, copie só as linhas de preferência do config.toml.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não achou a pasta global? Peça ao Codex: "me diga o caminho da sua pasta .codex global e o que tem nela, sem abrir nada pessoal". Ele mostra onde está.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Mude uma preferência no lugar certo</h3>
+  <p class="pgoal">No computador, com o aplicativo do Codex aberto num projeto seu. Pronto quando uma conversa nova mostrar a preferência mudada só nesse projeto. Cerca de 10 minutos.</p>
+  <p class="psafe">O Codex só grava depois do seu "pode gravar". Se algo sair estranho, peça "desfaça a mudança que você fez no config.toml" e confira de novo.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Quero que &lt;a preferência, ex.: o esforço padrão seja medium&gt; só neste projeto, sem mudar os outros.
+Consulte a sua documentação e me diga:
+1. em que arquivo isso fica (no .codex do projeto ou no global);
+2. a linha exata que vai escrever.
+Só grave depois que eu aprovar.</pre></div>
+  <details class="mais"><summary>Veja o molde já preenchido pela Paula</summary>
+    <p>Quero que <b>o modelo padrão seja o GPT-6-Luna</b> só no projeto paula-escritorio, sem mudar os outros. Consulte a sua documentação e me diga em que arquivo isso fica e a linha exata que vai escrever. Só grave depois que eu aprovar.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Ache as duas pastas: peça ao Codex "me mostre o caminho da pasta .codex deste projeto e o da .codex global". Depois mostre os itens ocultos e confira. A do projeto pode ainda não existir; o Codex cria.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o molde no Codex, troque o que está entre &lt; &gt; e leia a resposta: arquivo e linha.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Aprove, abra uma conversa nova neste projeto (botão de nova conversa; o nome pode mudar entre versões) e confira o seletor embaixo da caixa de mensagem: ele mostra o modelo e o esforço. Depois confira que outro projeto continua igual.</span></label></li>
+  </ol>
+  <p class="pdone">Você mudou uma preferência sabendo onde ela mora e até onde ela vale.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>A pasta .codex</h3>
+    <ol>
+      <li><span><b>Oculta</b>o ponto no nome esconde; o atalho de itens ocultos mostra.</span></li>
+      <li><span><b>Sala ou prédio</b>.codex do projeto vale só ali; ~/.codex vale em todos.</span></li>
+      <li><span><b>Peça ao Codex</b>diga o que quer, pergunte onde vai e aprove a linha antes.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe onde o Codex guarda as preferências e como mudá-las sem quebrar nada.</p>
+    <p class="na-action">Hoje, abra o config.toml global no bloco de notas, só para ler. Anote o modelo e o esforço que estão lá: você vai usá-los na próxima aula.</p>
+    <p class="na-hook">Na próxima aula: a primeira linha do arquivo escolhe o modelo. Qual usar para um e-mail simples e qual para um problema difícil?</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que fica na pasta global</h3>
+    <p>A ~/.codex é a gaveta pessoal do Codex no seu computador. Além do config.toml, ele guarda ali as memórias, o histórico das sessões, as tarefas que rodam sozinhas e o seu acesso à conta. Quase tudo isso o próprio Codex escreve e lê. Os nomes exatos dos arquivos internos podem mudar entre versões.</p>
+    <h4>Você mexe?</h4>
+    <ul>
+      <li><b>config.toml</b>: sim, de preferência pedindo ao Codex.</li>
+      <li><b>Memórias</b>: peça para revisar ou apagar uma memória.</li>
+      <li><b>Histórico</b>: não. Ele serve para retomar conversas antigas.</li>
+      <li><b>Acesso à conta</b>: nunca. E nunca envie a ninguém.</li>
+    </ul>
+  </section>
+  <section class="comp-sec"><h3>Proteja o que não sai da máquina</h3>
+    <p>Nunca ponha a pasta global numa pasta compartilhada da nuvem, nem escreva senha dentro do config.toml ou do AGENTS.md. Antes de mandar a pasta de um projeto para alguém, pergunte ao Codex: "tem algo pessoal nesta pasta?". Se o seu acesso vazar, troque a senha da conta e entre de novo no Codex.</p>
+    <h4>A pergunta que volta</h4>
+    <p>"Projeto ou usuário?" reaparece na aula 12, com a pasta das receitas reutilizáveis. Quem entendeu a sala e o prédio aqui, entende lá.</p>
+  </section>
+</details>
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-8">próxima aula →</a></nav>
+<p class="aula-pe">Aula 7 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-7">
+[
+  {"front":"Você abriu a pasta do projeto e não viu nenhuma .codex. Ela não existe ou você precisa fazer algo antes de concluir isso?","back":"Mostre os itens ocultos primeiro. Pasta com ponto no começo do nome fica escondida por padrão."},
+  {"front":"O Jorge quer o modelo leve só na pasta da loja, não nas propostas para a prefeitura. Onde a preferência deve ser gravada?","back":"Na .codex do projeto loja-jorge. A global mudaria todos os projetos dele."},
+  {"front":"Um amigo pediu a sua configuração do Codex. O que você manda?","back":"Só as linhas de preferência copiadas do config.toml. A pasta global tem o seu acesso à conta e o histórico."},
+  {"front":"Antes de deixar o Codex gravar uma preferência nova, que duas coisas você pede para ele mostrar?","back":"Em que arquivo ela vai (projeto ou global) e a linha exata que será escrita."}
+]
+</script>
+</section>

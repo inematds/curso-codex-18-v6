@@ -1,0 +1,164 @@
+<section class="view" id="v-aula-13" data-aula="13" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 13 de 18</p>
+  <h1>Plugins: conecte seus <em>aplicativos</em></h1>
+  <figure class="cena"><img src="assets/img/aula-13.webp" width="1280" height="720" alt="Jorge, dono de loja de materiais de construção, liga cabos entre o notebook, a impressora e o celular no balcão: é a ideia de conectar o Codex aos aplicativos que ele já usa."></figure>
+  <p class="promise">Você consegue conectar um aplicativo seu ao Codex, usá-lo num pedido e saber onde desconectar.</p>
+  <p class="why">Até agora o Codex só enxergava os arquivos da sua pasta. O e-mail, o drive e a agenda ficavam do lado de fora, e você fazia o papel de carteiro: copiava de um lado e colava do outro. Esta aula fecha esse vaivém.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Um plugin liga o Codex a um aplicativo seu, como e-mail ou drive.</li>
+      <li>Você conecta uma vez, entrando com a sua conta, e libera só o necessário.</li>
+      <li>Depois é só pedir em português; e o que não usa, você desconecta.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Um plugin acaba com o copia e cola</h2>
+  <p>Um <span class="gterm" data-def="conexão pronta entre o Codex e um aplicativo, como e-mail, agenda ou drive. Você entra uma vez com a sua conta.">plugin</span> é uma conexão pronta entre o Codex e um aplicativo que você já usa. Com ele ligado, o Codex lê e age no aplicativo direto, dentro do que você autorizou.</p>
+  <p>Existem <span class="gterm" data-def="conexão pronta entre o Codex e um aplicativo, como e-mail, agenda ou drive. Você entra uma vez com a sua conta.">plugins</span> para Gmail, Google Drive, Canva, ClickUp, LinkedIn e muitos outros. O catálogo cresce o tempo todo.</p>
+  <p data-ex="consultora">Paula respondia candidatos assim: abria o Gmail, copiava a mensagem, colava no Codex, pegava o rascunho e colava de volta. Se esquecia um anexo, a resposta saía torta.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sem plugin</span><p>Você copia e cola entre o e-mail e o Codex.</p><p>Ele só vê o pedaço que você colou. Anexos e mensagens antigas ficam de fora.</p></div>
+      <div class="depois"><span class="rot">Com plugin</span><p>Ele busca a conversa inteira direto no e-mail.</p><p>Vê anexos e datas, e deixa o rascunho pronto dentro do próprio Gmail.</p></div>
+      <p class="saldo"><b>Saldo:</b> um pedido no lugar de dez idas e voltas entre duas janelas.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Conecte uma vez, com a sua conta</h2>
+  <p>No aplicativo do Codex existe uma área de Plugins. Você procura o aplicativo pelo nome, clica para conectar e entra com a sua conta. O nome do botão pode mudar entre versões; procure por "Plugins" ou pelo ícone de peça.</p>
+  <p>Na tela de autorização, o próprio aplicativo pergunta o que o Codex pode ver e mexer. Leia antes de aceitar: procure as palavras ver, editar e apagar. Quando der, fique só com ver, que é só leitura.</p>
+  <p data-ex="lojista">Jorge começou pelo Google Drive, onde fica o catálogo da loja. Liberou só leitura. Para testar, pediu a lista das cinco pastas mais recentes e viu nomes reais voltarem.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex · Plugins</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> Plugins</div>
+        <div class="item doc dentro"><span class="pin">2</span> Buscar: Drive</div>
+        <div class="item doc dentro">Google Drive · ler e organizar arquivos</div>
+        <div class="item botao"><span class="pin">3</span> Conectar</div>
+        <div class="item doc dentro"><span class="pin">4</span> Permitir: ver arquivos (só leitura)</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Abra a área de Plugins no aplicativo do Codex.</span></li>
+      <li><span class="pin">2</span><span>Busque o aplicativo pelo nome e leia o que ele faz.</span></li>
+      <li><span class="pin">3</span><span>Clique em conectar e entre com a sua conta.</span></li>
+      <li><span class="pin">4</span><span>Na autorização, marque só o que a tarefa precisa.</span></li>
+    </ol>
+  </figure>
+  <details class="mais"><summary>Prefere digitar? Há um caminho opcional</summary>
+    <p>Quem já usa o <span class="gterm" data-def="janela de texto onde você digita comandos para o computador. No Codex é opcional: o aplicativo faz o mesmo com cliques.">terminal</span> pode listar, ligar e desligar plugins por comandos. Não é preciso: o aplicativo faz o mesmo com cliques.</p>
+    <div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="pr">$</span> codex plugin list
+<span class="pr">$</span> codex plugin add &lt;nome&gt;
+<span class="pr">$</span> codex plugin remove &lt;nome&gt;</code></pre>
+    <p class="tela-nota">Ver os que você tem, ligar um novo e desligar um que não usa.</p></div>
+  </details>
+</section>
+
+<section class="step" data-kind="pratica">
+  <h2><span class="n">3</span>Depois é só pedir em português</h2>
+  <p>Você não precisa "chamar" o plugin. Cite o aplicativo no pedido e o Codex usa a conexão no mesmo ciclo de sempre: pensa, usa a ferramenta, responde.</p>
+  <p>O plugin traz o material. Uma <span class="gterm" data-def="receita reutilizável: um arquivo SKILL.md com o nome, quando usar e os passos de uma tarefa.">skill</span>, se você tiver, dá o padrão da resposta. E rascunho vem antes de envio: e-mail mandado não volta.</p>
+  <p data-ex="consultora">Paula pediu os rascunhos de resposta aos candidatos da vaga de analista da cliente Acme, usando a skill que montou na aula 11. Nada saiu sem a revisão dela. Não fez a aula 11? Tire do pedido a linha da skill: o plugin funciona igual.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Use o plugin do Gmail para achar os e-mails desta semana de candidatos à vaga de analista da Acme que ainda não respondi.
+Para cada um, prepare um rascunho com a skill resposta-candidato.
+Não envie nada: me mostre a lista e espere a minha aprovação.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Usei o plugin do Gmail e a skill resposta-candidato.
+Deixei os rascunhos na sua caixa, sem enviar:
+1. [nome do candidato] — vaga de analista, Acme
+2. …
+Quer que eu ajuste o tom de algum antes de você aprovar?</p>
+      </div>
+      <p class="tela-nota bom">A resposta diz qual plugin e qual skill usou, e confirma que nada foi enviado.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Libere pouco e desconecte o que não usa</h2>
+  <p>Cada plugin é uma porta aberta para uma conta sua. A regra é dar só o que a tarefa precisa e revisar a lista de tempos em tempos. Para desconectar, abra o plugin na área de Plugins e use o botão de desconectar.</p>
+  <p>E quando o aplicativo não tem plugin? Ainda há saídas. Uma é o <span class="gterm" data-def="padrão aberto para ligar agentes de IA a ferramentas e aplicativos externos.">MCP</span>, se o serviço oferecer. Outra é uma <span class="gterm" data-def="porta que um programa oferece para outro programa conversar com ele. Cobra por uso, à parte da assinatura.">API</span> com chave guardada fora da conversa. A última é o navegador, tema da próxima aula.</p>
+  <p data-ex="lojista">Jorge revisou os plugins no fim do mês. Achou um de design que nunca usou e um de agenda com poder de apagar eventos. Desconectou o primeiro e refez o segundo só para leitura.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="depois"><span class="rot">Faça</span><p>Leia a tela de autorização antes de aceitar.</p><p>Prefira só leitura. Revise a lista de plugins a cada três meses.</p></div>
+      <div class="antes"><span class="rot">Evite</span><p>Aceitar acesso total por pressa.</p><p>Colar chave ou senha no <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span>, numa skill ou na conversa.</p></div>
+    </div>
+    <figcaption>O cartão Faça cabe num papel colado na tela. O cartão Evite mostra os erros que abrem a porta demais.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se o aplicativo que você queria não aparece no catálogo, não force. Conecte primeiro um que exista, como o drive, e aprenda o caminho com ele. O resto vem depois.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Conecte um aplicativo de baixo risco</h3>
+  <p class="pgoal">No computador; no celular, leia agora e faça depois. Use a pasta de projeto que você abriu na aula 1 ou qualquer pasta sua. com o aplicativo do Codex aberto. Pronto quando ele responder com nomes reais do seu aplicativo e você souber onde desconectar. Cerca de 10 minutos.</p>
+  <p class="psafe">Com só leitura, o Codex não muda nada na sua conta. Se a autorização pedir mais do que você quer, cancele: nada fica conectado. Se algo parecer estranho depois, desconecte na área de Plugins.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na área de Plugins, escolha um aplicativo que você usa todo dia e cujo conteúdo não é crítico, como o drive. Conecte com a sua conta, só leitura.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Num projeto seu, peça: "Use o plugin do &lt;aplicativo&gt; e liste os 5 itens mais recentes. Só leia, não mude nada." Confira se os nomes são reais.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Abra de novo o plugin na área de Plugins e encontre o botão de desconectar. Não precisa clicar: só saiba onde ele está.</span></label></li>
+  </ol>
+  <details class="mais"><summary>Veja como a Paula fez</summary>
+    <p>Paula conectou o Google Drive, só leitura, e pediu: "Use o plugin do Google Drive e liste os 5 modelos de proposta mais recentes. Só leia." Voltaram os nomes dos arquivos dela. O e-mail ela deixou para a semana seguinte.</p>
+  </details>
+  <p class="pdone">Você conectou um aplicativo, usou num pedido e sabe como desligar a conexão.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Plugins</h3>
+    <ol>
+      <li><span><b>Conectar</b>área de Plugins, buscar pelo nome, entrar com a conta.</span></li>
+      <li><span><b>Usar</b>cite o aplicativo no pedido; rascunho antes de envio.</span></li>
+      <li><span><b>Cuidar</b>só leitura quando der, revisão a cada trimestre, desconectar o que sobra.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe ligar o Codex a um aplicativo seu e controlar o que ele pode fazer lá.</p>
+    <p class="na-action">Hoje, anote as três tarefas que você mais repete fora do Codex. Ao lado de cada uma, escreva qual aplicativo ela usa. Essa é a sua lista de plugins a procurar.</p>
+    <p class="na-hook">Na próxima aula: e o portal do fornecedor, que não tem plugin nenhum? O Codex abre o site e usa por você.</p>
+  </div>
+</div>
+
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec">
+    <h3>Como escolher o primeiro plugin</h3>
+    <p>Parta da tarefa, não do catálogo. O catálogo é dividido em categorias: criatividade, ferramentas de desenvolvimento, negócios, dados e comunicação. Escreva as três tarefas que você mais repete fora do Codex e só então procure.</p>
+    <p>O Jorge perguntou a si mesmo o que fazia toda semana fora do Codex. A resposta foi a arte da promoção e a lista de tarefas da equipe. Ele foi atrás de um plugin de design e de um de tarefas. Nada além disso.</p>
+    <h4>Peça a sugestão ao Codex</h4>
+    <p>Diga: "Estas são as tarefas que eu faço toda semana fora do Codex: &lt;lista&gt;. Que tipo de plugin me ajudaria em cada uma?". Ele aponta a categoria, e você confere no catálogo o que existe.</p>
+  </section>
+  <section class="comp-sec">
+    <h3>Chave guardada do jeito certo</h3>
+    <p>Quando o caminho é uma chave de acesso, ela fica num arquivo separado de segredos, fora de qualquer envio ou compartilhamento. Uma chave por serviço, com o mínimo de permissão. Peça ao Codex: "leia a chave desse arquivo e nunca a escreva na conversa". Chave colada no AGENTS.md, numa skill ou no meio da conversa é chave exposta.</p>
+  </section>
+</details>
+
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-14">próxima aula →</a></nav>
+<p class="aula-pe">Aula 13 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-13">
+[
+  {"front":"Você passa a manhã copiando e-mails de clientes para o Codex e colando as respostas de volta. O que muda se você ligar a conexão do e-mail?","back":"Ele busca a conversa inteira direto na caixa, com anexos e datas, e deixa o rascunho pronto lá. Você só revisa."},
+  {"front":"A tela de autorização pede para ver, editar e apagar arquivos, mas você só quer que ele leia. O que faz?","back":"Escolhe só leitura, se houver a opção. Se não houver, cancela e procura outro caminho. Nada fica conectado."},
+  {"front":"O sistema de vendas da sua loja não aparece no catálogo. Quais caminhos ainda existem, do mais estável ao mais frágil?","back":"Uma conexão MCP, se o serviço oferecer; uma chave de acesso guardada fora da conversa; e, por último, o navegador."},
+  {"front":"Faz meses que você ligou um aplicativo de agenda com poder de apagar eventos e quase não usa. Qual a decisão?","back":"Desconectar, ou refazer a conexão só para leitura. Porta aberta sem uso é risco sem ganho."}
+]
+</script>
+</section>

@@ -1,0 +1,168 @@
+<section class="view" id="v-aula-8" data-aula="8" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 8 de 18</p>
+  <h1>Modelos: o veículo certo <em>para cada entrega</em></h1>
+  <figure class="cena"><img src="assets/img/aula-8.webp" width="1280" height="720" alt="Paula, consultora de RH, escolhe entre três canetas diferentes sobre a mesa antes de escrever, com o notebook aberto: cada tarefa pede uma ferramenta."></figure>
+  <p class="promise">Você consegue escolher o modelo certo para três tarefas do seu dia e trocar de modelo no meio de uma conversa.</p>
+  <p class="why">Quem usa sempre o modelo mais forte "por garantia" vê a cota da semana acabar na quarta-feira. Quem usa sempre o mais leve refaz o trabalho difícil três vezes. Esta aula mostra como escolher em segundos.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Modelo mais forte resolve mais e <b>gasta mais cota</b>.</li>
+      <li>São três prateleiras: <b>Luna</b> leve, <b>Sol</b> do dia a dia, <b>Astra</b> forte.</li>
+      <li>Você troca de modelo entre uma mensagem e outra, sem perder a conversa.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Cada modelo tem força e gasto</h2>
+  <p>O Codex é o programa em volta. Quem pensa lá dentro é o modelo de IA, e você escolhe qual. Os mais fortes resolvem problemas difíceis, mas consomem mais da sua cota. Os leves respondem rápido e gastam pouco.</p>
+  <p>Cota é o limite semanal de uso da sua assinatura. Não é dinheiro: é quanto trabalho você pode pedir na semana.</p>
+  <p data-ex="lojista">Para entregar um saco de cimento na rua de trás, o Jorge manda a moto. Para uma carga de tijolos, manda o caminhão. Ninguém usa caminhão para levar um parafuso.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sempre o mais forte</span><p><b>Hábito:</b> o modelo mais forte para tudo, até para corrigir uma placa de promoção.</p><p><b>Resultado:</b> a cota da semana acaba no meio dela.</p></div>
+      <div class="depois"><span class="rot">Modelo pela tarefa</span><p><b>Hábito:</b> o leve para a placa, o do dia a dia para o catálogo, o forte só para o problema difícil.</p><p><b>Resultado:</b> a cota dura a semana inteira.</p></div>
+    </div>
+    <figcaption>O resultado das tarefas simples é o mesmo nos dois cartões. Muda quanto sobrou de cota.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Três prateleiras: Luna, Sol e Astra</h2>
+  <p>Abra o seletor de modelo e veja os nomes. Hoje, a família principal tem três. O <b>GPT-6-Astra</b> é o mais forte e o que mais consome. O <b>GPT-6.1-Sol</b> é o cavalo de trabalho do dia a dia. O <b>GPT-6-Luna</b> é rápido e econômico, feito para tarefas fáceis.</p>
+  <p>A lista também mostra a geração anterior: GPT-5.6-Sol, Terra e Luna. Funciona, mas num trabalho novo não há motivo para escolhê-la. Os nomes mudam com o tempo; as três prateleiras ficam.</p>
+  <p data-ex="consultora">A Paula clicou no seletor embaixo da caixa de mensagem e viu a lista. O nome do botão pode mudar entre versões; ele costuma mostrar o modelo atual.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Seletor de modelo</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> GPT-6-Astra</div>
+        <div class="item doc"><span class="pin">2</span> GPT-6.1-Sol</div>
+        <div class="item doc"><span class="pin">3</span> GPT-6-Luna</div>
+        <div class="item doc dentro">GPT-5.6-Sol · GPT-5.6-Terra · GPT-5.6-Luna</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Forte: Jorge pede uma análise do estoque do ano inteiro com sugestões de compra.</span></li>
+      <li><span class="pin">2</span><span>Dia a dia: Paula monta uma proposta a partir do modelo dela.</span></li>
+      <li><span class="pin">3</span><span>Leve: Jorge corrige a ortografia das placas de promoção.</span></li>
+    </ol>
+    <figcaption>Apareceu um nome novo na lista? Pergunte ao Codex em qual das três prateleiras ele entra.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O gasto se mede em pedaços de texto</h2>
+  <p>O modelo não lê palavras inteiras. Ele lê <span class="gterm" data-def="pedaço de texto que o modelo lê ou escreve, mais ou menos 4 letras ou três quartos de uma palavra.">tokens</span>, e são eles que medem o gasto. A <b>entrada</b> é o que ele lê: seu pedido, o <span class="gterm" data-def="arquivo de texto na pasta do projeto com as regras da casa. O Codex lê antes de cada conversa nova.">AGENTS.md</span>, os arquivos. A <b>saída</b> é o que ele escreve, inclusive o raciocínio. Saída gasta mais que entrada.</p>
+  <p data-ex="consultora">A Paula fez dois pedidos na mesma manhã. Os dois gastaram cota, mas de jeitos diferentes.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="neutro"><span class="rot">Entrada grande</span><p><b>Pedido:</b> "Leia estes 10 contratos e me diga quais vencem em novembro."</p><p><b>Gasto:</b> muito para ler, pouco para escrever: uma lista curta.</p></div>
+      <div class="neutro"><span class="rot">Saída grande</span><p><b>Pedido:</b> "Escreva 15 posts para o LinkedIn sobre entrevista de emprego."</p><p><b>Gasto:</b> pouco para ler, muito para escrever.</p></div>
+      <p class="saldo"><b>Entrada</b> é o que ele lê; <b>saída</b>, o que ele escreve. <b>Como economizar:</b> pasta organizada poupa entrada; pedir só o que vai usar poupa saída.</p>
+    </div>
+  </figure>
+  <p>No Codex você entra com a conta do ChatGPT e usa a assinatura, com cota semanal. A <span class="gterm" data-def="porta que um programa oferece para outro programa conversar com ele. Cobra por uso, à parte da assinatura.">API</span> é outro caminho, para programas e automações. Ela cobra por milhão de tokens, e o modelo mais forte custa mais. Para uso pessoal, a assinatura rende muito mais.</p>
+</section>
+
+<section class="step" data-kind="pratica">
+  <h2><span class="n">4</span>Troque de modelo no meio da conversa</h2>
+  <p>Você não fica preso ao modelo do começo. A troca vale para a próxima mensagem: escolha no seletor e só então escreva o pedido. A conversa continua; muda só quem pensa na próxima resposta.</p>
+  <p data-ex="consultora">A Paula desenhou a estrutura de um treinamento novo com o Astra. Na hora dos e-mails de convite, passou para o Luna.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você · GPT-6-Astra</span>Com base em clientes/acme.md, monte a estrutura de um treinamento de liderança em 4 encontros.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Li paula-escritorio/AGENTS.md e clientes/acme.md. Proposta em 4 encontros:
+1. Papel do líder na equipe…</p>
+        <p class="msg eu"><span class="quem">Você · GPT-6-Luna</span>Agora escreva o e-mail de convite para o primeiro encontro, em 5 linhas. Deixe [data] e [horário] para eu preencher.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Assunto: Convite – Encontro 1 do treinamento de liderança
+Olá, [nome]…</p>
+      </div>
+      <p class="tela-nota bom">Mesma conversa. O Luna aproveitou tudo o que o Astra já tinha feito.</p>
+    </div>
+    <figcaption>O rótulo ao lado de "Você" mostra o modelo escolhido antes de cada mensagem.</figcaption>
+  </figure>
+  <p>Prefere digitar comandos? No <span class="gterm" data-def="janela de texto onde você digita comandos para o computador. No Codex é opcional: o aplicativo faz o mesmo com cliques.">terminal</span>, você escolhe o modelo ao abrir. O padrão de todas as sessões fica no <span class="gterm" data-def="arquivo de preferências do Codex, em texto, com linhas do tipo chave = valor.">config.toml</span> da aula 7.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Opcional</span></div>
+<pre><code>codex -m gpt-6-luna</code></pre>
+<p class="tela-nota">Abre o Codex já com o modelo leve, só nesta sessão.</p></div></figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">O Jorge precisa descobrir por que as vendas de tinta caíram nos últimos seis meses, cruzando estoque e promoções. Qual modelo faz sentido?</p>
+    <button class="opt" data-k="a" data-fb="O leve serve para tarefas curtas. Aqui há muitas partes e algo a descobrir.">GPT-6-Luna, porque responde rápido</button>
+    <button class="opt" data-k="b" data-fb="Isso. Problema longo, com várias partes e uma causa escondida, é lugar do forte.">GPT-6-Astra, porque o problema é difícil</button>
+    <button class="opt" data-k="c" data-fb="Não. Cada modelo consome a cota num ritmo diferente; o forte gasta mais.">Qualquer um, porque todos gastam igual</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Na dúvida, use o GPT-6.1-Sol. Ele resolve a maior parte do trabalho de escritório. Suba para o Astra só se a resposta vier fraca.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Escolha o modelo para três tarefas suas</h3>
+  <p class="pgoal">No computador, com o Codex aberto num projeto seu. Pronto quando você tiver três tarefas com o modelo escolhido e tiver feito uma troca no meio da conversa. Cerca de 10 minutos.</p>
+  <p class="psafe">O pedido abaixo só recomenda; o Codex não executa nenhuma tarefa. Se ele sugerir o Astra para quase tudo, escreva "reveja pensando em economizar cota".</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Esta semana eu preciso fazer:
+&lt;tarefa 1&gt;
+&lt;tarefa 2&gt;
+&lt;tarefa 3&gt;
+Para cada uma, diga se devo usar o modelo leve (GPT-6-Luna), o do dia a dia (GPT-6.1-Sol) ou o mais forte (GPT-6-Astra), e explique em uma frase por quê. Não execute nenhuma tarefa ainda.</pre></div>
+  <details class="mais"><summary>Veja as três tarefas que o Jorge listou</summary>
+    <p>1. Corrigir a ortografia das placas da promoção de sábado. 2. Atualizar o catálogo com os 12 produtos novos de estoque.csv. 3. Descobrir por que o estoque de cimento da planilha não bate com o que tem no depósito.</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Cole o pedido, troque as três tarefas por tarefas reais suas e leia a recomendação. Concorda com ela?</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Escolha no seletor o modelo indicado para uma delas e faça o pedido de verdade.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Na mesma conversa, troque o modelo no seletor e mande a próxima tarefa. Confira que ele lembra do que já foi feito.</span></label></li>
+  </ol>
+  <p class="pdone">Você escolheu o modelo pela tarefa, não pelo hábito, e trocou sem perder a conversa.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Modelo pela tarefa</h3>
+    <ol>
+      <li><span><b>Luna</b>curta e repetitiva: placa, ortografia, convite.</span></li>
+      <li><span><b>Sol</b>o trabalho normal do dia, com arquivos e algum raciocínio.</span></li>
+      <li><span><b>Astra</b>difícil, longa, com muitas partes ou que já falhou antes.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe escolher o modelo pela tarefa e trocar quando a tarefa muda.</p>
+    <p class="na-action">Hoje, antes do próximo pedido, olhe o seletor e pergunte: esta tarefa é leve, do dia a dia ou difícil? Escolha e só então escreva.</p>
+    <p class="na-hook">Na próxima aula: dentro do mesmo modelo, ainda dá para mandar pensar mais ou menos. Quando isso vale a cota?</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Assinatura e API, lado a lado</h3>
+    <p>A assinatura é como um plano de quilometragem: mensal, com cota semanal, previsível. A API é como taxímetro: cobra por milhão de tokens, separando entrada e saída, e serve para programas que rodam sozinhos. Se a cota da assinatura acabar, dá para comprar créditos extras.</p>
+    <h4>Cuidados</h4>
+    <ul>
+      <li>Nunca cole uma chave de acesso no AGENTS.md ou em arquivo comum.</li>
+      <li>Não teste a API "só para ver" sem saber quanto vai consumir.</li>
+    </ul>
+  </section>
+  <section class="comp-sec"><h3>Acompanhe a cota</h3>
+    <p>O aplicativo mostra quanto da cota semanal já foi usado. O nome da tela pode mudar entre versões; procure por "uso" ou "limites". Se na terça você já gastou metade, é sinal de modelo forte demais para tarefas simples.</p>
+  </section>
+</details>
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-9">próxima aula →</a></nav>
+<p class="aula-pe">Aula 8 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-8">
+[
+  {"front":"Você vai pedir um e-mail simples de confirmação de reunião. Qual prateleira de modelo escolhe, e por quê?","back":"A leve, GPT-6-Luna. Tarefa curta e sem nada a descobrir: o forte faria igual e gastaria mais cota."},
+  {"front":"Pedir 15 posts gasta cota de um jeito; ler 10 contratos gasta de outro. Qual é a diferença?","back":"Os posts gastam na saída, o que ele escreve. Os contratos gastam na entrada, o que ele lê. A saída pesa mais."},
+  {"front":"Na terça-feira você já usou metade da cota semanal. O que provavelmente está acontecendo?","back":"Modelo forte demais para tarefas simples. Volte ao GPT-6.1-Sol como padrão e use o Astra só no que é difícil."},
+  {"front":"Começou com o Astra e agora só falta escrever um convite. Precisa abrir uma conversa nova para usar o Luna?","back":"Não. Troque no seletor e mande a próxima mensagem; a conversa continua com tudo o que já foi feito."}
+]
+</script>
+</section>

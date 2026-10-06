@@ -1,0 +1,163 @@
+<section class="view" id="v-aula-6" data-aula="6" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Aula 6 de 18</p>
+  <h1><span class="gterm" data-def="uma cópia de trabalho do projeto, feita pelo Git, para testar mudanças sem mexer no original.">Worktrees</span>: cópias para <em>testar sem medo</em></h1>
+  <figure class="cena"><img src="assets/img/aula-6.webp" width="1280" height="720" alt="Jorge, dono de loja de materiais de construção, de avental no balcão, segura duas cópias impressas do mesmo catálogo de preços, uma em cada mão, e compara: o original segue intacto enquanto a cópia é testada."></figure>
+  <p class="promise">Você consegue pedir uma cópia de trabalho do projeto, testar nela e decidir se junta ao original ou descarta.</p>
+  <p class="why">Pedir uma mudança grande direto no projeto original é teste sem volta. Se ficar ruim, você nem lembra mais como era antes. Esta aula mostra o jeito organizado de testar numa cópia. Para um texto solto quase nunca é preciso; para mudança grande no que está em uso, é o que dá segurança.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Uma <b>worktree</b> é uma cópia de trabalho ligada ao original.</li>
+      <li>O original se chama <b>main</b>. A cópia trabalha numa linha paralela.</li>
+      <li>Gostou? Peça para juntar, vendo antes o que muda. Não gostou? Descarte.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Teste no original não tem volta</h2>
+  <p>Quando o Codex mexe direto nos arquivos do projeto, a mudança vale na hora. Se o resultado ficar estranho, o jeito antigo já se foi.</p>
+  <p data-ex="lojista">Jorge tem uma página simples da loja, na pasta loja-jorge/site, que os clientes já usam. Ele quis cores novas e um menu diferente. Compare as duas vezes que ele pediu.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">No original</span><p><b>Pedido:</b> "Refaça o visual inteiro da página da loja."</p><p><b>Resultado:</b> o visual novo ficou estranho, e a página dos clientes mudou junto. Jorge não sabia mais como era a antiga.</p></div>
+      <div class="depois"><span class="rot">Numa cópia</span><p><b>Pedido:</b> o mesmo, numa cópia de trabalho.</p><p><b>Resultado:</b> a página dos clientes seguiu igual. Jorge comparou as duas e decidiu com calma.</p></div>
+      <p class="saldo"><b>Saldo:</b> o mesmo teste, sem nenhum risco para o que está em uso.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Worktree é uma cópia ligada ao original</h2>
+  <p>Copiar a pasta na mão ("site-copia", "site-copia2") vira bagunça rápido. O <span class="gterm" data-def="programa que guarda o histórico de versões de uma pasta e permite cópias paralelas.">Git</span> faz isso de forma organizada.</p>
+  <p>Ele guarda o histórico, isto é, as versões salvas da pasta. E cria uma <span class="gterm" data-def="uma cópia de trabalho do projeto, feita pelo Git, para testar mudanças sem mexer no original.">worktree</span>: outra pasta de trabalho, ligada ao mesmo histórico. Como as duas se conhecem, dá para levar só as mudanças boas da cópia para o original depois.</p>
+  <p data-ex="lojista">Na loja do Jorge, a cópia ficou no mesmo computador, numa pasta ao lado do projeto.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Meus arquivos</span></div>
+      <div class="janela-body">
+        <div class="item pasta"><span class="pin">1</span> loja-jorge (original)</div>
+        <div class="item doc dentro">site/index.html · visual antigo</div>
+        <div class="item pasta"><span class="pin">2</span> loja-jorge · cópia visual-novo</div>
+        <div class="item doc dentro">site/index.html · visual novo</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O original continua igual. É o que os clientes veem.</span></li>
+      <li><span class="pin">2</span><span>A cópia tem o mesmo arquivo, já com o teste. Os nomes da tela são ilustrativos.</span></li>
+    </ol>
+    <figcaption>As duas pastas ficam no seu computador. Cópia de trabalho não é cópia de segurança: se o disco quebrar, as duas vão junto.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>main é o original; o resto é linha de teste</h2>
+  <p>Toda worktree trabalha numa <span class="gterm" data-def="linha paralela de mudanças dentro do Git. A linha principal costuma se chamar main.">branch</span>. Pense numa linha de metrô: a main é a linha que todo mundo usa. A branch é um ramal que sai dela para testar uma estação nova.</p>
+  <p>Se o teste der certo, o ramal volta para a linha principal. Se não der, ele é desativado e a main nem percebe.</p>
+  <p data-ex="consultora">Paula abriu o aplicativo e viu "main" e outro nome que não conhecia ao lado do projeto dela. O Codex tinha criado uma cópia sozinho para trabalhar em paralelo. Nada estava errado.</p>
+  <figure class="diag"><svg viewBox="0 0 640 200" role="img" aria-label="Linha principal chamada main, com um ramal que sai, testa e volta para ela, e outro ramal que termina num X sem afetar a main.">
+    <line x1="30" y1="110" x2="610" y2="110" stroke="var(--accent)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M140 110 C190 40, 330 40, 400 110" fill="none" stroke="var(--line2)" stroke-width="5"/>
+    <path d="M260 110 C300 170, 380 175, 430 175" fill="none" stroke="var(--line2)" stroke-width="4" stroke-dasharray="8 6"/>
+    <text x="30" y="145">main (original)</text>
+    <text x="205" y="35">teste deu certo: volta</text>
+    <text x="440" y="180">teste ruim: descartado ✗</text>
+  </svg>
+  <figcaption>A linha grossa é a main, sempre em uso. O ramal de cima voltou para ela: as mudanças foram juntadas. O tracejado de baixo foi descartado sem estragar nada.</figcaption></figure>
+  <details class="mais"><summary>Apareceu um nome que você não pediu?</summary><p>Pergunte ao Codex: "para que serve esta cópia e em que linha ela está?". Ele explica em uma frase. Várias worktrees listadas costumam ser só trabalho em paralelo.</p></details>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Teste na cópia, depois junte ou descarte</h2>
+  <p>No aplicativo, ao começar uma conversa, existe a opção de trabalhar numa nova worktree local. Ela fica perto da caixa de mensagem. O nome do botão pode mudar entre versões.</p>
+  <p>Para levar o resultado ao original, peça ao Codex. O cuidado é um só: ele mostra o que vai mudar antes de juntar.</p>
+  <p data-ex="lojista">Jorge gostou do visual novo na cópia. Antes de pôr no ar, pediu para ver o que mudaria.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Codex</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Você</span>Gostei do resultado desta cópia. Antes de juntar com a main, me mostre em linguagem simples quais arquivos mudam e o que muda em cada um. Só junte depois que eu disser "pode juntar".</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Nesta cópia mudaram dois arquivos:
+1. site/index.html: menu novo no topo.
+2. site/estilo.css: cores novas.
+Aguardo o seu "pode juntar".</p>
+      </div>
+      <p class="tela-nota bom">Ele lista e espera. Se não gostar, diga "descarte esta cópia e volte para a main".</p>
+    </div>
+  </figure>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal (opcional)</span></div>
+<pre><code><span class="pr">$</span> codex --worktree</code></pre>
+<p class="tela-nota">Abre a sessão do Codex já numa worktree nova. Rode dentro da pasta do projeto.</p></div>
+  <figcaption>Quem usa o <span class="gterm" data-def="janela de texto onde você digita comandos para o computador. No Codex é opcional: o aplicativo faz o mesmo com cliques.">terminal</span> chega ao mesmo lugar com um comando. O aplicativo faz o mesmo com cliques.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Se o Codex disser que a pasta não usa Git, peça: "ative o Git nesta pasta e salve uma primeira versão". Se ele avisar de um conflito, é porque o original também mudou no mesmo trecho: peça que explique e pergunte a você como resolver.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Teste uma mudança numa cópia e decida</h3>
+  <p class="pgoal">No computador, no aplicativo do Codex, numa pasta de treino. Pronto quando você tiver juntado ou descartado a cópia, e o original estiver como você decidiu. Cerca de 12 minutos.</p>
+  <p class="psafe">Use uma pasta de treino, não a do trabalho. Tudo acontece na cópia até você dizer "pode juntar". Se algo sair estranho, peça "descarte esta cópia e volte para a main".</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Esta pasta usa Git? Se não usar, ative e salve uma primeira versão.
+Depois, nesta cópia de trabalho, &lt;a mudança que você quer testar&gt;.
+Quando terminar, me mostre em linguagem simples quais arquivos mudaram e o que muda em cada um.
+Não junte com a main até eu dizer "pode juntar".</pre></div>
+  <details class="mais"><summary>Veja o molde já preenchido pela Paula</summary>
+    <p>Esta pasta usa Git? Se não usar, ative e salve uma primeira versão. Depois, nesta cópia de trabalho, reescreva modelos/email-boas-vindas.md num tom mais direto, com no máximo 8 linhas. Quando terminar, me mostre o que mudou. Não junte com a main até eu dizer "pode juntar".</p>
+  </details>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Crie uma pasta de treino com um ou dois textos seus e abra no aplicativo como projeto.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Comece uma conversa escolhendo a opção de nova worktree, perto da caixa de mensagem.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Cole o molde, troque o que está entre &lt; &gt; e mande. Leia a lista do que mudou.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Decida: "pode juntar" ou "descarte esta cópia". Abra o arquivo original e confira.</span></label></li>
+  </ol>
+  <p class="pdone">Você testou uma mudança sem arriscar o original e tomou a decisão final com o que mudou à vista.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Testar numa cópia</h3>
+    <ol>
+      <li><span><b>Worktree</b>cópia de trabalho ligada ao original, no seu computador.</span></li>
+      <li><span><b>main</b>a linha principal. Outros nomes são linhas de teste.</span></li>
+      <li><span><b>Juntar ou descartar</b>veja o que muda antes; "pode juntar" só no fim.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe testar uma ideia arriscada sem tocar no que está em uso.</p>
+    <p class="na-action">Hoje, pense numa mudança grande que você evita por medo de estragar o que funciona. Anote o pedido dela no formato do molde para testar numa cópia.</p>
+    <p class="na-hook">Na próxima aula: onde ficam as preferências que valem para todo projeto, e como pedir ao Codex que mude uma delas no lugar certo.</p>
+  </div>
+</div>
+
+<details class="complementar">
+  <summary>Material complementar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que você vê na interface</h3>
+    <ol>
+      <li>main (ou master, em projetos mais antigos): a linha principal, o original. Não precisa se preocupar.</li>
+      <li>Outro nome de linha: uma linha paralela de teste. Se você não pediu, pergunte ao Codex para que serve.</li>
+      <li>Várias cópias listadas: trabalho em paralelo. O Codex às vezes cria sozinho.</li>
+    </ol>
+  </section>
+  <section class="comp-sec"><h3>Quando você não precisa disso</h3>
+    <p>A worktree nasceu para projetos feitos em equipe, com várias pessoas ou vários agentes mexendo no mesmo material ao mesmo tempo. Para um texto, um e-mail ou um post, quase nunca é preciso.</p>
+    <h4>Na prática</h4>
+    <p>Se a Paula quer testar outro tom numa proposta, basta pedir: "crie uma versão nova em outro arquivo e não mexa na original". Salvar como versão nova já resolve.</p>
+    <h4>Use quando</h4>
+    <ol><li>A mudança é grande e pode quebrar algo que está em uso.</li><li>Você quer comparar duas ideias, uma de cada vez.</li><li>Vários agentes vão mexer no mesmo projeto ao mesmo tempo.</li></ol>
+  </section>
+</details>
+<nav class="lnav"><a href="#aula-5">← aula anterior</a><a class="next" href="#aula-7">próxima aula →</a></nav>
+<p class="aula-pe">Aula 6 · Codex 18 v6 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-6">
+[
+  {"front":"Você quer trocar o visual inteiro da página que os clientes já usam. Onde pede para o Codex fazer o teste?","back":"Numa worktree, a cópia de trabalho. A página em uso segue igual até você decidir juntar."},
+  {"front":"O Codex terminou o teste na cópia e você gostou. O que pede antes de dizer \"pode juntar\"?","back":"A lista, em linguagem simples, dos arquivos que mudam e do que muda em cada um."},
+  {"front":"Paula quer só experimentar um tom diferente num e-mail de boas-vindas. Precisa de worktree?","back":"Não. Basta pedir uma versão nova em outro arquivo, sem mexer na original."}
+]
+</script>
+</section>
