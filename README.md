@@ -10,5 +10,6 @@ Manutenção: edite `aulas/aula-N.html`, rode `python3 ~/.claude/skills/formato-
 
 ## Mais no INEMA.CLUB
 
+- [Ficha deste curso](https://www.inema.club/cursos/316-codex-18-v6-os-18-conceitos-que-fazem-o-codex-trabalhar-por-voce/)
 - [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
 - [Todos os cursos](https://www.inema.club/cursos/)
